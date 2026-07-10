@@ -2,43 +2,115 @@
 title: "Santa Cruz Monarch Movement Dashboard"
 ---
 
-## Overview
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
 
-This dashboard provides interactive exploration of movement patterns from the Santa Cruz monarch telemetry study led by Xerces Society and Point Blue Conservation Science.
+library(data.table)
 
-### Available Tools
+dashboard_summary <- readRDS(
+  "data/dashboard_summary.rds"
+)
 
-#### Detection Explorer
+tag_summary <- readRDS(
+  "data/tag_summary.rds"
+)
+```
 
-View all telemetry detections by:
+# Santa Cruz Monarch Movement Dashboard
 
-- Behavior Type
-- Individual Tag
+Interactive exploration of monarch movement patterns, detection histories, and movement episodes from the South Carolina Monarch Telemetry Study.
 
-#### Episode Explorer
+## Study Summary
 
-View movement episodes by:
+```{r}
+#| echo: false
 
-- Behavior Type
-- Episode Type
-- Individual Tag
+dashboard_summary
+```
 
-### Site Boundaries
+## Available Explorers
 
-Active and Other sites are displayed using the project site boundaries.
+### Detection Explorer
 
-### Tracking Summary
+Explore individual monarch detections through time and space.
 
-Each tag includes:
+Features:
 
-- Tracking period
-- Number of detections
-- Number of visits
-- Number of forays
-- Primary site
-- Observed behavioral states
+- Interactive map
+- Site boundaries
+- Behavioral states
+- Individual tag histories
+- Detection-level records
 
----
+### Episode Explorer
 
-Data Source:
-Santa Cruz Monarch Telemetry Study
+Explore movement episodes among sites.
+
+Features:
+
+- Movement trajectories
+- Episode start and end locations
+- Behavioral classifications
+- Visit and foray episodes
+- Site transitions
+
+## Example Tag Summaries
+
+```{r}
+#| echo: false
+
+tag_summary[
+  ,
+  .(
+    tag_id,
+    tracking_period,
+    n_detections,
+    n_episodes,
+    n_visits,
+    n_forays,
+    primary_site
+  )
+][
+  order(-n_detections)
+][
+  1:min(10, .N)
+]
+```
+
+## Data Included
+
+The dashboard currently includes:
+
+- `r format(dashboard_summary$total_points, big.mark = ",")` telemetry detections
+- `r format(dashboard_summary$n_episodes, big.mark = ",")` movement episodes
+- `r format(dashboard_summary$n_tags, big.mark = ",")` individually tracked monarchs
+- Site boundary polygons
+- Behavior classifications:
+  - Migration
+  - Premigration
+  - Winter
+
+## Study Period
+
+```{r}
+#| echo: false
+#| results: asis
+
+cat(
+  paste0(
+    "**",
+    format(
+      dashboard_summary$first_detection,
+      "%d-%b-%Y"
+    ),
+    " to ",
+    format(
+      dashboard_summary$last_detection,
+      "%d-%b-%Y"
+    ),
+    "**"
+  )
+)
+```

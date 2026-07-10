@@ -4,14 +4,42 @@
     "href": "index.html",
     "title": "Santa Cruz Monarch Movement Dashboard",
     "section": "",
-    "text": "This dashboard provides interactive exploration of movement patterns from the Santa Cruz monarch telemetry study led by Xerces Society and Point Blue Conservation Science.\n\n\n\n\nView all telemetry detections by:\n\nBehavior Type\nIndividual Tag\n\n\n\n\nView movement episodes by:\n\nBehavior Type\nEpisode Type\nIndividual Tag\n\n\n\n\n\nActive and Other sites are displayed using the project site boundaries.\n\n\n\nEach tag includes:\n\nTracking period\nNumber of detections\nNumber of visits\nNumber of forays\nPrimary site\nObserved behavioral states\n\n\nData Source: Santa Cruz Monarch Telemetry Study"
+    "text": "Interactive exploration of monarch movement patterns, detection histories, and movement episodes from the South Carolina Monarch Telemetry Study.\n\n\n\n\n   n_tags n_episodes n_visits n_forays total_points first_detection\n    &lt;int&gt;      &lt;int&gt;    &lt;int&gt;    &lt;int&gt;        &lt;int&gt;          &lt;Date&gt;\n1:     41       3452     2164     1288       427901      2025-11-18\n   last_detection\n           &lt;Date&gt;\n1:     2026-04-29\n\n\n\n\n\n\n\nExplore individual monarch detections through time and space.\nFeatures:\n\nInteractive map\nSite boundaries\nBehavioral states\nIndividual tag histories\nDetection-level records\n\n\n\n\nExplore movement episodes among sites.\nFeatures:\n\nMovement trajectories\nEpisode start and end locations\nBehavioral classifications\nVisit and foray episodes\nSite transitions\n\n\n\n\n\n\n\n      tag_id            tracking_period n_detections n_episodes n_visits\n      &lt;char&gt;                     &lt;char&gt;        &lt;int&gt;      &lt;int&gt;    &lt;int&gt;\n 1: A496835F 21-Nov-2025 to 03-Apr-2026        53243        229       91\n 2: C1AEFFB4 21-Nov-2025 to 22-Apr-2026        37184        175       85\n 3: 8100F39A 18-Nov-2025 to 17-Mar-2026        24036        127       73\n 4: DD65DD49 19-Nov-2025 to 10-Feb-2026        20767        100       40\n 5: 3B660685 21-Nov-2025 to 13-Feb-2026        18196        125       74\n 6: 91E9B5F8 21-Nov-2025 to 08-Mar-2026        17971        198      114\n 7: BA74FD2A 19-Nov-2025 to 07-Apr-2026        15668        197      109\n 8: 36F944CB 19-Nov-2025 to 12-Feb-2026        13585         79       45\n 9: E486B67D 21-Nov-2025 to 06-Mar-2026        13472        123       88\n10: 2B58DD6C 19-Nov-2025 to 05-Feb-2026        12712        109       73\n    n_forays                  primary_site\n       &lt;int&gt;                        &lt;char&gt;\n 1:      138                          &lt;NA&gt;\n 2:       90                          &lt;NA&gt;\n 3:       54 Lighthouse  Field, Santa Cruz\n 4:       60                          &lt;NA&gt;\n 5:       51        Moran Lake, Moran Lake\n 6:       84                          &lt;NA&gt;\n 7:       88                          &lt;NA&gt;\n 8:       34                          &lt;NA&gt;\n 9:       35        Moran Lake, Moran Lake\n10:       36        Moran Lake, Moran Lake\n\n\n\n\n\nThe dashboard currently includes:\n\n427,901 telemetry detections\n3,452 movement episodes\n41 individually tracked monarchs\nSite boundary polygons\nBehavior classifications:\n\nMigration\nPremigration\nWinter\n\n\n\n\n\n18-Nov-2025 to 29-Apr-2026"
   },
   {
-    "objectID": "index.html#overview",
-    "href": "index.html#overview",
+    "objectID": "index.html#study-summary",
+    "href": "index.html#study-summary",
     "title": "Santa Cruz Monarch Movement Dashboard",
     "section": "",
-    "text": "This dashboard provides interactive exploration of movement patterns from the Santa Cruz monarch telemetry study led by Xerces Society and Point Blue Conservation Science.\n\n\n\n\nView all telemetry detections by:\n\nBehavior Type\nIndividual Tag\n\n\n\n\nView movement episodes by:\n\nBehavior Type\nEpisode Type\nIndividual Tag\n\n\n\n\n\nActive and Other sites are displayed using the project site boundaries.\n\n\n\nEach tag includes:\n\nTracking period\nNumber of detections\nNumber of visits\nNumber of forays\nPrimary site\nObserved behavioral states\n\n\nData Source: Santa Cruz Monarch Telemetry Study"
+    "text": "n_tags n_episodes n_visits n_forays total_points first_detection\n    &lt;int&gt;      &lt;int&gt;    &lt;int&gt;    &lt;int&gt;        &lt;int&gt;          &lt;Date&gt;\n1:     41       3452     2164     1288       427901      2025-11-18\n   last_detection\n           &lt;Date&gt;\n1:     2026-04-29"
+  },
+  {
+    "objectID": "index.html#available-explorers",
+    "href": "index.html#available-explorers",
+    "title": "Santa Cruz Monarch Movement Dashboard",
+    "section": "",
+    "text": "Explore individual monarch detections through time and space.\nFeatures:\n\nInteractive map\nSite boundaries\nBehavioral states\nIndividual tag histories\nDetection-level records\n\n\n\n\nExplore movement episodes among sites.\nFeatures:\n\nMovement trajectories\nEpisode start and end locations\nBehavioral classifications\nVisit and foray episodes\nSite transitions"
+  },
+  {
+    "objectID": "index.html#example-tag-summaries",
+    "href": "index.html#example-tag-summaries",
+    "title": "Santa Cruz Monarch Movement Dashboard",
+    "section": "",
+    "text": "tag_id            tracking_period n_detections n_episodes n_visits\n      &lt;char&gt;                     &lt;char&gt;        &lt;int&gt;      &lt;int&gt;    &lt;int&gt;\n 1: A496835F 21-Nov-2025 to 03-Apr-2026        53243        229       91\n 2: C1AEFFB4 21-Nov-2025 to 22-Apr-2026        37184        175       85\n 3: 8100F39A 18-Nov-2025 to 17-Mar-2026        24036        127       73\n 4: DD65DD49 19-Nov-2025 to 10-Feb-2026        20767        100       40\n 5: 3B660685 21-Nov-2025 to 13-Feb-2026        18196        125       74\n 6: 91E9B5F8 21-Nov-2025 to 08-Mar-2026        17971        198      114\n 7: BA74FD2A 19-Nov-2025 to 07-Apr-2026        15668        197      109\n 8: 36F944CB 19-Nov-2025 to 12-Feb-2026        13585         79       45\n 9: E486B67D 21-Nov-2025 to 06-Mar-2026        13472        123       88\n10: 2B58DD6C 19-Nov-2025 to 05-Feb-2026        12712        109       73\n    n_forays                  primary_site\n       &lt;int&gt;                        &lt;char&gt;\n 1:      138                          &lt;NA&gt;\n 2:       90                          &lt;NA&gt;\n 3:       54 Lighthouse  Field, Santa Cruz\n 4:       60                          &lt;NA&gt;\n 5:       51        Moran Lake, Moran Lake\n 6:       84                          &lt;NA&gt;\n 7:       88                          &lt;NA&gt;\n 8:       34                          &lt;NA&gt;\n 9:       35        Moran Lake, Moran Lake\n10:       36        Moran Lake, Moran Lake"
+  },
+  {
+    "objectID": "index.html#data-included",
+    "href": "index.html#data-included",
+    "title": "Santa Cruz Monarch Movement Dashboard",
+    "section": "",
+    "text": "The dashboard currently includes:\n\n427,901 telemetry detections\n3,452 movement episodes\n41 individually tracked monarchs\nSite boundary polygons\nBehavior classifications:\n\nMigration\nPremigration\nWinter"
+  },
+  {
+    "objectID": "index.html#study-period",
+    "href": "index.html#study-period",
+    "title": "Santa Cruz Monarch Movement Dashboard",
+    "section": "",
+    "text": "18-Nov-2025 to 29-Apr-2026"
   },
   {
     "objectID": "detections.html",

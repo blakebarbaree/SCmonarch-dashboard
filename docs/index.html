@@ -120,11 +120,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
+  <li><a href="#santa-cruz-monarch-movement-dashboard" id="toc-santa-cruz-monarch-movement-dashboard" class="nav-link active" data-scroll-target="#santa-cruz-monarch-movement-dashboard">Santa Cruz Monarch Movement Dashboard</a>
   <ul class="collapse">
-  <li><a href="#available-tools" id="toc-available-tools" class="nav-link" data-scroll-target="#available-tools">Available Tools</a></li>
-  <li><a href="#site-boundaries" id="toc-site-boundaries" class="nav-link" data-scroll-target="#site-boundaries">Site Boundaries</a></li>
-  <li><a href="#tracking-summary" id="toc-tracking-summary" class="nav-link" data-scroll-target="#tracking-summary">Tracking Summary</a></li>
+  <li><a href="#study-summary" id="toc-study-summary" class="nav-link" data-scroll-target="#study-summary">Study Summary</a></li>
+  <li><a href="#available-explorers" id="toc-available-explorers" class="nav-link" data-scroll-target="#available-explorers">Available Explorers</a>
+  <ul class="collapse">
+  <li><a href="#detection-explorer" id="toc-detection-explorer" class="nav-link" data-scroll-target="#detection-explorer">Detection Explorer</a></li>
+  <li><a href="#episode-explorer" id="toc-episode-explorer" class="nav-link" data-scroll-target="#episode-explorer">Episode Explorer</a></li>
+  </ul></li>
+  <li><a href="#example-tag-summaries" id="toc-example-tag-summaries" class="nav-link" data-scroll-target="#example-tag-summaries">Example Tag Summaries</a></li>
+  <li><a href="#data-included" id="toc-data-included" class="nav-link" data-scroll-target="#data-included">Data Included</a></li>
+  <li><a href="#study-period" id="toc-study-period" class="nav-link" data-scroll-target="#study-period">Study Period</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -151,46 +157,99 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This dashboard provides interactive exploration of movement patterns from the Santa Cruz monarch telemetry study led by Xerces Society and Point Blue Conservation Science.</p>
-<section id="available-tools" class="level3">
-<h3 class="anchored" data-anchor-id="available-tools">Available Tools</h3>
-<section id="detection-explorer" class="level4">
-<h4 class="anchored" data-anchor-id="detection-explorer">Detection Explorer</h4>
-<p>View all telemetry detections by:</p>
+<section id="santa-cruz-monarch-movement-dashboard" class="level1">
+<h1>Santa Cruz Monarch Movement Dashboard</h1>
+<p>Interactive exploration of monarch movement patterns, detection histories, and movement episodes from the South Carolina Monarch Telemetry Study.</p>
+<section id="study-summary" class="level2">
+<h2 class="anchored" data-anchor-id="study-summary">Study Summary</h2>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>   n_tags n_episodes n_visits n_forays total_points first_detection
+    &lt;int&gt;      &lt;int&gt;    &lt;int&gt;    &lt;int&gt;        &lt;int&gt;          &lt;Date&gt;
+1:     41       3452     2164     1288       427901      2025-11-18
+   last_detection
+           &lt;Date&gt;
+1:     2026-04-29</code></pre>
+</div>
+</div>
+</section>
+<section id="available-explorers" class="level2">
+<h2 class="anchored" data-anchor-id="available-explorers">Available Explorers</h2>
+<section id="detection-explorer" class="level3">
+<h3 class="anchored" data-anchor-id="detection-explorer">Detection Explorer</h3>
+<p>Explore individual monarch detections through time and space.</p>
+<p>Features:</p>
 <ul>
-<li>Behavior Type</li>
-<li>Individual Tag</li>
+<li>Interactive map</li>
+<li>Site boundaries</li>
+<li>Behavioral states</li>
+<li>Individual tag histories</li>
+<li>Detection-level records</li>
 </ul>
 </section>
-<section id="episode-explorer" class="level4">
-<h4 class="anchored" data-anchor-id="episode-explorer">Episode Explorer</h4>
-<p>View movement episodes by:</p>
+<section id="episode-explorer" class="level3">
+<h3 class="anchored" data-anchor-id="episode-explorer">Episode Explorer</h3>
+<p>Explore movement episodes among sites.</p>
+<p>Features:</p>
 <ul>
-<li>Behavior Type</li>
-<li>Episode Type</li>
-<li>Individual Tag</li>
+<li>Movement trajectories</li>
+<li>Episode start and end locations</li>
+<li>Behavioral classifications</li>
+<li>Visit and foray episodes</li>
+<li>Site transitions</li>
 </ul>
 </section>
 </section>
-<section id="site-boundaries" class="level3">
-<h3 class="anchored" data-anchor-id="site-boundaries">Site Boundaries</h3>
-<p>Active and Other sites are displayed using the project site boundaries.</p>
+<section id="example-tag-summaries" class="level2">
+<h2 class="anchored" data-anchor-id="example-tag-summaries">Example Tag Summaries</h2>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>      tag_id            tracking_period n_detections n_episodes n_visits
+      &lt;char&gt;                     &lt;char&gt;        &lt;int&gt;      &lt;int&gt;    &lt;int&gt;
+ 1: A496835F 21-Nov-2025 to 03-Apr-2026        53243        229       91
+ 2: C1AEFFB4 21-Nov-2025 to 22-Apr-2026        37184        175       85
+ 3: 8100F39A 18-Nov-2025 to 17-Mar-2026        24036        127       73
+ 4: DD65DD49 19-Nov-2025 to 10-Feb-2026        20767        100       40
+ 5: 3B660685 21-Nov-2025 to 13-Feb-2026        18196        125       74
+ 6: 91E9B5F8 21-Nov-2025 to 08-Mar-2026        17971        198      114
+ 7: BA74FD2A 19-Nov-2025 to 07-Apr-2026        15668        197      109
+ 8: 36F944CB 19-Nov-2025 to 12-Feb-2026        13585         79       45
+ 9: E486B67D 21-Nov-2025 to 06-Mar-2026        13472        123       88
+10: 2B58DD6C 19-Nov-2025 to 05-Feb-2026        12712        109       73
+    n_forays                  primary_site
+       &lt;int&gt;                        &lt;char&gt;
+ 1:      138                          &lt;NA&gt;
+ 2:       90                          &lt;NA&gt;
+ 3:       54 Lighthouse  Field, Santa Cruz
+ 4:       60                          &lt;NA&gt;
+ 5:       51        Moran Lake, Moran Lake
+ 6:       84                          &lt;NA&gt;
+ 7:       88                          &lt;NA&gt;
+ 8:       34                          &lt;NA&gt;
+ 9:       35        Moran Lake, Moran Lake
+10:       36        Moran Lake, Moran Lake</code></pre>
+</div>
+</div>
 </section>
-<section id="tracking-summary" class="level3">
-<h3 class="anchored" data-anchor-id="tracking-summary">Tracking Summary</h3>
-<p>Each tag includes:</p>
+<section id="data-included" class="level2">
+<h2 class="anchored" data-anchor-id="data-included">Data Included</h2>
+<p>The dashboard currently includes:</p>
 <ul>
-<li>Tracking period</li>
-<li>Number of detections</li>
-<li>Number of visits</li>
-<li>Number of forays</li>
-<li>Primary site</li>
-<li>Observed behavioral states</li>
+<li>427,901 telemetry detections</li>
+<li>3,452 movement episodes</li>
+<li>41 individually tracked monarchs</li>
+<li>Site boundary polygons</li>
+<li>Behavior classifications:
+<ul>
+<li>Migration</li>
+<li>Premigration</li>
+<li>Winter</li>
+</ul></li>
 </ul>
-<hr>
-<p>Data Source: Santa Cruz Monarch Telemetry Study</p>
+</section>
+<section id="study-period" class="level2">
+<h2 class="anchored" data-anchor-id="study-period">Study Period</h2>
+<p><strong>18-Nov-2025 to 29-Apr-2026</strong></p>
 
 
 </section>
