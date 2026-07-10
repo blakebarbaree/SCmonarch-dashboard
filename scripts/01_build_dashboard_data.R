@@ -353,6 +353,63 @@ saveRDS(
 )
 
 # ============================================================
+# DASHBOARD SUMMARY
+# ============================================================
+
+dashboard_summary <-
+  
+  episodes_clean_final[
+    ,
+    .(
+      n_tags =
+        uniqueN(tag_id),
+      
+      n_episodes = .N,
+      
+      n_visits =
+        sum(
+          tolower(episode_type) == "visit",
+          na.rm = TRUE
+        ),
+      
+      n_forays =
+        sum(
+          tolower(episode_type) == "foray",
+          na.rm = TRUE
+        )
+    )
+  ]
+
+dashboard_summary[
+  ,
+  total_points :=
+    nrow(detections)
+]
+
+dashboard_summary[
+  ,
+  first_detection :=
+    min(
+      detections$obs_date,
+      na.rm = TRUE
+    )
+]
+
+dashboard_summary[
+  ,
+  last_detection :=
+    max(
+      detections$obs_date,
+      na.rm = TRUE
+    )
+]
+
+saveRDS(
+  dashboard_summary,
+  "data/dashboard_summary.rds"
+)
+
+# ============================================================
 # SAVE TAG SUMMARY
 # ============================================================
 
