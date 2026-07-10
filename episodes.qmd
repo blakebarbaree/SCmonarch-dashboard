@@ -1,0 +1,44 @@
+---
+title: "Santa Cruz Monarch Movement Dashboard"
+---
+
+## Overview
+
+This dashboard provides interactive exploration of movement patterns from the Santa Cruz monarch telemetry study led by Xerces Society and Point Blue Conservation Science.
+
+### Available Tools
+
+#### Detection Explorer
+
+View all telemetry detections by:
+
+- Behavior Type
+- Individual Tag
+
+#### Episode Explorer
+
+View movement episodes by:
+
+- Behavior Type
+- Episode Type
+- Individual Tag
+
+### Site Boundaries
+
+Active and Other sites are displayed using the project site boundaries.
+
+### Tracking Summary
+
+Each tag includes:
+
+- Tracking period
+- Number of detections
+- Number of visits
+- Number of forays
+- Primary site
+- Observed behavioral states
+
+---
+
+Data Source:
+Santa Cruz Monarch Telemetry Study

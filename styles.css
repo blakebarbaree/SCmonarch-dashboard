@@ -1,0 +1,14 @@
+.navbar-brand {
+  font-weight: bold;
+}
+
+.leaflet-container {
+  border-radius: 10px;
+}
+
+.sidebar-box {
+  padding: 10px;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,23 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "SC Monarch Dashboard"
+
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+
+      - href: detections.qmd
+        text: Detection Explorer
+
+      - href: episodes.qmd
+        text: Episode Explorer
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
