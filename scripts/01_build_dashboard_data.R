@@ -126,15 +126,15 @@ tag_summary <-
 tag_summary[
   ,
   tracking_period :=
-    paste0(
+    paste(
       format(
         first_detection,
-        "%d-%b"
+        "%d-%b-%Y"
       ),
-      " - ",
+      "to",
       format(
         last_detection,
-        "%d-%b"
+        "%d-%b-%Y"
       )
     )
 ]
