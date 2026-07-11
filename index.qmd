@@ -18,9 +18,7 @@ tag_summary <- readRDS(
 )
 ```
 
-# Santa Cruz Monarch Movement Dashboard
-
-Interactive exploration of monarch movement patterns, detection histories, and movement episodes from the South Carolina Monarch Telemetry Study.
+Interactive exploration of monarch movement patterns, detection histories, and movement episodes from the Santa Cruz Monarch Telemetry Study.
 
 ## Study Summary
 
