@@ -1,44 +1,240 @@
 ---
-title: "Santa Cruz Monarch Movement Dashboard"
+title: "Detection Explorer"
+page-layout: full
 ---
 
-## Overview
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
 
-This dashboard provides interactive exploration of movement patterns from the Santa Cruz monarch telemetry study led by Xerces Society and Point Blue Conservation Science.
+library(sf)
+library(leaflet)
 
-### Available Tools
+boundary102 <- readRDS(
+  "data/boundary102.rds"
+)
 
-#### Detection Explorer
+detections <- readRDS(
+  "data/detections.rds"
+)
 
-View all telemetry detections by:
+boundary102 <-
+  boundary102[
+    boundary102$SiteName %in%
+      unique(
+        na.omit(
+          detections$SiteName
+        )
+      ),
+  ]
 
-- Behavior Type
-- Individual Tag
+boundary102$SiteStatus_map <-
+  ifelse(
+    !is.na(boundary102$SiteStatus) &
+      boundary102$SiteStatus == "Active",
+    "Active",
+    "Other"
+  )
 
-#### Episode Explorer
+site_status_pal <-
+  colorFactor(
+    palette = c(
+      "#984EA3",
+      "#BDBDBD"
+    ),
+    domain = c(
+      "Active",
+      "Other"
+    )
+  )
 
-View movement episodes by:
+# ------------------------------------------------------------
+# Boundary alignment adjustment
+# ------------------------------------------------------------
 
-- Behavior Type
-- Episode Type
-- Individual Tag
+boundary102 <- st_transform(
+  boundary102,
+  32610
+)
 
-### Site Boundaries
+geom <- st_geometry(boundary102) + c(-80, -60)
 
-Active and Other sites are displayed using the project site boundaries.
+st_geometry(boundary102) <-
+  st_set_crs(
+    geom,
+    32610
+  )
 
-### Tracking Summary
+boundary102 <-
+  st_transform(
+    boundary102,
+    4326
+  )
 
-Each tag includes:
+detections <- st_transform(
+  detections,
+  32610
+)
 
-- Tracking period
-- Number of detections
-- Number of visits
-- Number of forays
-- Primary site
-- Observed behavioral states
+geom_det <- st_geometry(detections) + c(150, 25)
 
----
+st_geometry(detections) <-
+  st_set_crs(
+    geom_det,
+    32610
+  )
 
-Data Source:
-Santa Cruz Monarch Telemetry Study
+detections <- st_transform(
+  detections,
+  4326
+)
+
+# ------------------------------------------------------------
+# Reduce point density for faster web-map rendering
+# ------------------------------------------------------------
+
+set.seed(1)
+
+max_points_per_group <- 500
+
+sample_ids <-
+  unlist(
+    tapply(
+      seq_len(nrow(detections)),
+      interaction(
+        detections$tag_id,
+        detections$behavior_type,
+        drop = TRUE
+      ),
+      function(ii) {
+        sample(
+          ii,
+          min(
+            length(ii),
+            max_points_per_group
+          )
+        )
+      }
+    )
+  )
+
+detections_map <-
+  detections[
+    sample_ids,
+  ]
+
+behavior_pal <-
+  colorFactor(
+    palette = c(
+      "#E69F00",
+      "#0072B2",
+      "#009E73"
+    ),
+    domain = c(
+      "migration",
+      "premigration",
+      "winter"
+    )
+  )
+```
+
+Interactive map of all detections.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+leaflet(
+  width = "100%",
+  height = "500px",
+  options =
+    leafletOptions(
+      preferCanvas = TRUE
+    )
+) |>
+
+  addProviderTiles(
+    providers$Esri.WorldTopoMap
+  ) |>
+
+  addPolygons(
+    data = boundary102,
+    fillColor =
+      ~site_status_pal(
+        SiteStatus_map
+      ),
+    fillOpacity = 0.35,
+    color =
+      ~site_status_pal(
+        SiteStatus_map
+      ),
+    weight = 2,
+    opacity = 0.9,
+    popup =
+      ~paste0(
+        "<b>Site:</b> ",
+        SiteName,
+        "<br><b>Status:</b> ",
+        SiteStatus_map
+      )
+  ) |>
+
+  addCircleMarkers(
+    data = detections_map,
+
+    radius = 3,
+
+    stroke = FALSE,
+
+    fillOpacity = 0.75,
+
+    color =
+      ~behavior_pal(
+        behavior_type
+      ),
+
+    popup =
+      ~paste0(
+        "<b>Tag:</b> ",
+        tag_id,
+
+        "<br><b>Tracking:</b> ",
+        tracking_period,
+
+        "<br><b>Behavior:</b> ",
+        behavior_type,
+
+        "<br><b>Episode:</b> ",
+        episode_type,
+
+        "<br><b>Date:</b> ",
+        obs_date,
+
+        "<br><b>Site:</b> ",
+        SiteName
+      )
+
+  ) |>
+
+  addLegend(
+    position = "bottomright",
+    pal = behavior_pal,
+    values = detections_map$behavior_type,
+    title = "Behavior Type",
+    opacity = 1
+  ) |>
+
+  addLegend(
+    position = "topleft",
+    pal = site_status_pal,
+    values = c(
+      "Active",
+      "Other"
+    ),
+    title = "Site Status",
+    opacity = 1
+  )
+
+```

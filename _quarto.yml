@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "SC Monarch Dashboard"
+  title: "Santa Cruz Monarch Movement Dashboard"
 
   navbar:
     left:
@@ -15,6 +15,11 @@ website:
 
       - href: episodes.qmd
         text: Episode Explorer
+
+render:
+  - index.qmd
+  - detections.qmd
+  - episodes.qmd
 
 format:
   html:

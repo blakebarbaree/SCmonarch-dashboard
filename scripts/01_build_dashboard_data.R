@@ -52,6 +52,91 @@ detections <-
   )
 
 # ============================================================
+# COORDINATE OFFSET CORRECTION
+# ============================================================
+# Detection and episode coordinates are in a projected coordinate
+# system that aligns with UTM Zone 10N after applying a consistent
+# offset. Offsets are estimated by comparing detection site means
+# to boundary site centroids.
+
+det_site_means <-
+  detections[
+    !is.na(SiteName),
+    .(
+      det_x = mean(x1_, na.rm = TRUE),
+      det_y = mean(y1_, na.rm = TRUE),
+      n_pts = .N
+    ),
+    by = SiteName
+  ]
+
+boundary_centroids_utm <-
+  boundary102[
+    boundary102$SiteName %in% det_site_means$SiteName,
+  ] |>
+  st_transform(26910) |>
+  st_centroid()
+
+boundary_centroids_dt <-
+  as.data.table(
+    st_drop_geometry(boundary_centroids_utm)
+  )
+
+boundary_coords <-
+  as.data.table(
+    st_coordinates(boundary_centroids_utm)
+  )
+
+boundary_centroids_dt[
+  ,
+  `:=`(
+    boundary_x = boundary_coords$X,
+    boundary_y = boundary_coords$Y
+  )
+]
+
+coord_compare <-
+  merge(
+    det_site_means,
+    boundary_centroids_dt[
+      ,
+      .(
+        SiteName,
+        boundary_x,
+        boundary_y
+      )
+    ],
+    by = "SiteName",
+    all = FALSE
+  )
+
+coord_compare[
+  ,
+  `:=`(
+    diff_x = boundary_x - det_x,
+    diff_y = boundary_y - det_y
+  )
+]
+
+x_offset <-
+  median(
+    coord_compare$diff_x,
+    na.rm = TRUE
+  )
+
+y_offset <-
+  median(
+    coord_compare$diff_y,
+    na.rm = TRUE
+  )
+
+cat(
+  "\nCoordinate offsets applied:\n",
+  "x_offset = ", round(x_offset, 2), "\n",
+  "y_offset = ", round(y_offset, 2), "\n"
+)
+
+# ============================================================
 # TAG SUMMARY
 # ============================================================
 
@@ -212,17 +297,26 @@ tag_summary <-
 # DETECTIONS SF
 # ============================================================
 
+detections[
+  ,
+  `:=`(
+    x1_map = x1_ + x_offset,
+    y1_map = y1_ + y_offset
+  )
+]
+
 detections_sf <-
   
   st_as_sf(
     detections,
     coords = c(
-      "x1_",
-      "y1_"
+      "x1_map",
+      "y1_map"
     ),
-    crs = 3857,
+    crs = 26910,
     remove = FALSE
-  )
+  ) |>
+  st_transform(3857)
 
 detections_sf <-
   
@@ -242,17 +336,28 @@ saveRDS(
 # EPISODE START POINTS
 # ============================================================
 
+episodes_clean_final[
+  ,
+  `:=`(
+    start_x_map = start_x + x_offset,
+    start_y_map = start_y + y_offset,
+    end_x_map = end_x + x_offset,
+    end_y_map = end_y + y_offset
+  )
+]
+
 episodes_sf <-
   
   st_as_sf(
     episodes_clean_final,
     coords = c(
-      "start_x",
-      "start_y"
+      "start_x_map",
+      "start_y_map"
     ),
-    crs = 3857,
+    crs = 26910,
     remove = FALSE
-  )
+  ) |>
+  st_transform(3857)
 
 episodes_sf <-
   
@@ -290,11 +395,11 @@ episode_lines <-
         any(
           is.na(
             c(
-              row$start_x,
-              row$start_y,
-              row$end_x,
-              row$end_y
-            )
+              row$start_x_map,
+              row$start_y_map,
+              row$end_x_map,
+              row$end_y_map            
+              )
           )
         )
       ){
@@ -334,7 +439,7 @@ episode_lines_sf <-
         episode_lines[
           keep
         ],
-        crs = 3857
+        crs = 26910
       )
   )
 
@@ -345,6 +450,12 @@ episode_lines_sf <-
     tag_summary,
     by = "tag_id",
     all.x = TRUE
+  )
+
+episode_lines_sf <-
+  st_transform(
+    episode_lines_sf,
+    3857
   )
 
 saveRDS(

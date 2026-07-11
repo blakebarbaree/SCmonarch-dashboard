@@ -1,44 +1,105 @@
 ---
-title: "Santa Cruz Monarch Movement Dashboard"
+title: "Episode Explorer"
 ---
 
-## Overview
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
 
-This dashboard provides interactive exploration of movement patterns from the Santa Cruz monarch telemetry study led by Xerces Society and Point Blue Conservation Science.
+library(sf)
+library(leaflet)
 
-### Available Tools
+boundary102 <- readRDS(
+  "data/boundary102.rds"
+)
 
-#### Detection Explorer
+episode_lines <- readRDS(
+  "data/episode_lines.rds"
+)
 
-View all telemetry detections by:
+boundary102 <-
+  boundary102[
+    boundary102$SiteName %in%
+      unique(
+        na.omit(
+          c(
+            episode_lines$departed_site,
+            episode_lines$arrived_site
+          )
+        )
+      ),
+  ]
 
-- Behavior Type
-- Individual Tag
+behavior_pal <- c(
+  migration = "#E69F00",
+  premigration = "#0072B2",
+  winter = "#009E73"
+)
+```
 
-#### Episode Explorer
+Interactive map of movement episodes.
 
-View movement episodes by:
+```{r}
+#| echo: false
 
-- Behavior Type
-- Episode Type
-- Individual Tag
+leaflet() |>
 
-### Site Boundaries
+  addProviderTiles(
+    providers$Esri.WorldTopoMap
+  ) |>
 
-Active and Other sites are displayed using the project site boundaries.
+  addPolygons(
+    data = boundary102,
 
-### Tracking Summary
+    fillColor =
+      ~ifelse(
+        SiteStatus == "Active",
+        "#1B9E77",
+        "#BDBDBD"
+      ),
 
-Each tag includes:
+    fillOpacity = 0.3,
 
-- Tracking period
-- Number of detections
-- Number of visits
-- Number of forays
-- Primary site
-- Observed behavioral states
+    color = "black",
 
----
+    weight = 1
+  ) |>
 
-Data Source:
-Santa Cruz Monarch Telemetry Study
+  addPolylines(
+    data = episode_lines,
+
+    color =
+      ~behavior_pal[
+        behavior_type
+      ],
+
+    weight = 2,
+
+    opacity = 0.8,
+
+    popup =
+      ~paste0(
+        "<b>Tag:</b> ",
+        tag_id,
+
+        "<br><b>Tracking:</b> ",
+        tracking_period,
+
+        "<br><b>Behavior:</b> ",
+        behavior_type,
+
+        "<br><b>Episode Type:</b> ",
+        episode_type,
+
+        "<br><b>Duration (min):</b> ",
+        round(duration_min),
+
+        "<br><b>Departed:</b> ",
+        departed_site,
+
+        "<br><b>Arrived:</b> ",
+        arrived_site
+      )
+  )
+```
