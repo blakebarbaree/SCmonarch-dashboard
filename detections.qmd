@@ -50,19 +50,25 @@ site_status_pal <-
   )
 
 # ------------------------------------------------------------
-# Boundary alignment adjustment
+# Boundary geometry
 # ------------------------------------------------------------
 
-boundary102 <- st_transform(
-  boundary102,
-  32610
-)
+# ------------------------------------------------------------
+# Boundary geometry
+# ------------------------------------------------------------
+# Apply the same small south adjustment used for detections.
 
-geom <- st_geometry(boundary102) + c(-80, -60)
+boundary102 <-
+  st_transform(
+    boundary102,
+    32610
+  )
+
+geom_boundary <- st_geometry(boundary102) + c(0, -25)
 
 st_geometry(boundary102) <-
   st_set_crs(
-    geom,
+    geom_boundary,
     32610
   )
 
@@ -72,23 +78,50 @@ boundary102 <-
     4326
   )
 
-detections <- st_transform(
-  detections,
-  32610
-)
+# ------------------------------------------------------------
+# Rebuild detection geometry from x1_ / y1_
+# Treat x1_ / y1_ as EPSG:32612,
+# transform to EPSG:32610,
+# move slightly south,
+# then transform to WGS84
+# ------------------------------------------------------------
 
-geom_det <- st_geometry(detections) + c(150, 25)
+detections_df <-
+  if(inherits(detections, "sf")) {
+    st_drop_geometry(detections)
+  } else {
+    detections
+  }
 
-st_geometry(detections) <-
+detections_new <- st_as_sf(
+  detections_df,
+  coords = c(
+    "x1_",
+    "y1_"
+  ),
+  crs = 32612,
+  remove = FALSE
+) |>
+  st_transform(
+    32610
+  )
+
+# Small south adjustment
+geom_det <- st_geometry(detections_new) + c(0, -25)
+
+st_geometry(detections_new) <-
   st_set_crs(
     geom_det,
     32610
   )
 
-detections <- st_transform(
-  detections,
-  4326
-)
+detections_new <-
+  st_transform(
+    detections_new,
+    4326
+  )
+
+detections <- detections_new
 
 # ------------------------------------------------------------
 # Reduce point density for faster web-map rendering
@@ -137,6 +170,7 @@ behavior_pal <-
       "winter"
     )
   )
+
 ```
 
 Interactive map of all detections.
@@ -148,7 +182,7 @@ Interactive map of all detections.
 
 leaflet(
   width = "100%",
-  height = "500px",
+  height = "650px",
   options =
     leafletOptions(
       preferCanvas = TRUE
