@@ -5,7 +5,7 @@ project:
 website:
   title: "Santa Cruz Monarch Movement Dashboard"
 
-  navbar:
+navbar:
     left:
       - href: index.qmd
         text: Home
@@ -13,13 +13,17 @@ website:
       - href: detections.qmd
         text: Detection Explorer
 
+      - href: detections_by_tag.qmd
+        text: Detections by Tag
+
       - href: episodes.qmd
         text: Episode Explorer
 
+      - href: episodes_by_tag.qmd
+        text: Episodes by Tag
+        
 render:
-  - index.qmd
-  - detections.qmd
-  - episodes.qmd
+  - "*.qmd"
 
 format:
   html:

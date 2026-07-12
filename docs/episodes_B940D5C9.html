@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Episode Explorer - B940D5C9 – Santa Cruz Monarch Movement Dashboard</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+
+<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+
+<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
+
+<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+
+<script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
+
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+
+<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+
+<script src="site_libs/leaflet-binding-2.2.3/leaflet.js"></script>
+
+<script src="site_libs/leaflet-providers-3.0.0/leaflet-providers.js"></script>
+
+<script src="site_libs/leaflet-providers-plugin-2.2.3/leaflet-providers-plugin.js"></script>
+
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#tag-b940d5c9" id="toc-tag-b940d5c9" class="nav-link active" data-scroll-target="#tag-b940d5c9">Tag: B940D5C9</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Episode Explorer - B940D5C9</h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-page-left">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div style="margin-bottom:15px;">
+<label><b>Select Tag:</b></label><br><select onchange="window.location=this.value"><option value="episodes_013EFFF1.html">013EFFF1</option><option value="episodes_04E1C314.html">04E1C314</option><option value="episodes_08F73F9E.html">08F73F9E</option><option value="episodes_0C1A306A.html">0C1A306A</option><option value="episodes_0CE40498.html">0CE40498</option><option value="episodes_0CE7CA9D.html">0CE7CA9D</option><option value="episodes_0E11CEFD.html">0E11CEFD</option><option value="episodes_18A030A0.html">18A030A0</option><option value="episodes_1C09A3A6.html">1C09A3A6</option><option value="episodes_2B58DD6C.html">2B58DD6C</option><option value="episodes_345A251C.html">345A251C</option><option value="episodes_36F944CB.html">36F944CB</option><option value="episodes_38A3725B.html">38A3725B</option><option value="episodes_3B660685.html">3B660685</option><option value="episodes_3D01741D.html">3D01741D</option><option value="episodes_43D0FD09.html">43D0FD09</option><option value="episodes_4400DAD8.html">4400DAD8</option><option value="episodes_480CB043.html">480CB043</option><option value="episodes_4A0A9F0B.html">4A0A9F0B</option><option value="episodes_5B44443D.html">5B44443D</option><option value="episodes_6F001664.html">6F001664</option><option value="episodes_8100F39A.html">8100F39A</option><option value="episodes_91E9B5F8.html">91E9B5F8</option><option value="episodes_A496835F.html">A496835F</option><option value="episodes_A9545E9B.html">A9545E9B</option><option value="episodes_A9DA911C.html">A9DA911C</option><option value="episodes_AF25EE40.html">AF25EE40</option><option value="episodes_AF8F955E.html">AF8F955E</option><option value="episodes_B940D5C9.html" selected="">B940D5C9</option><option value="episodes_BA74FD2A.html">BA74FD2A</option><option value="episodes_C1AEFFB4.html">C1AEFFB4</option><option value="episodes_C27B57C8.html">C27B57C8</option><option value="episodes_D0837EEE.html">D0837EEE</option><option value="episodes_D130CD6D.html">D130CD6D</option><option value="episodes_D72E44EE.html">D72E44EE</option><option value="episodes_DD65DD49.html">DD65DD49</option><option value="episodes_E3BABA94.html">E3BABA94</option><option value="episodes_E486B67D.html">E486B67D</option><option value="episodes_EFCEA373.html">EFCEA373</option><option value="episodes_F589923A.html">F589923A</option><option value="episodes_F6BA554F.html">F6BA554F</option></select>
+</div>
+<section id="tag-b940d5c9" class="level3">
+<h3 class="anchored" data-anchor-id="tag-b940d5c9">Tag: B940D5C9</h3>
+<p>Interactive map of detection episodes or consecutive detections inside or outside of a overwintering site boundary.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="htmlwidget-0d6716acd5e11be8e226" style="width:100%;height:600px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-0d6716acd5e11be8e226">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}},"preferCanvas":true},"calls":[{"method":"addProviderTiles","args":["Esri.WorldTopoMap",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addPolygons","args":[[[[{"lng":[-122.0585499717723,-122.0585541020927,-122.0585687244453,-122.0585811518771,-122.0585913532333,-122.0585993029392,-122.0586049810655,-122.0586083733773,-122.0586094713701,-122.0586089432008,-122.0586076274721,-122.0586037899016,-122.0585974410664,-122.0585885984654,-122.0585772864707,-122.0585635362607,-122.0585473857341,-122.0585288794053,-122.058508068282,-122.0584850097243,-122.0584597672866,-122.0584324105429,-122.0584030148944,-122.0583716613621,-122.0583384363634,-122.0583034314738,-122.0582667431747,-122.0582284725871,-122.0581887251935,-122.0581476105465,-122.0581052419673,-122.0580617362332,-122.0580172132557,-122.0579717957503,-122.0579256088975,-122.0578787799989,-122.0578314381253,-122.0563123025409,-122.0562663961758,-122.0562202529185,-122.0561739904747,-122.0561277268545,-122.0560815800709,-122.0560356678386,-122.0559901072742,-122.0559450145973,-122.0555841956409,-122.0555375464206,-122.0554916687481,-122.0554466912625,-122.0554027400787,-122.0553599384339,-122.0553184063422,-122.0552782602576,-122.0552396127482,-122.0552025721799,-122.0551672424128,-122.0551337225101,-122.0551021064603,-122.0550724829133,-122.0550449349322,-122.0550195397606,-122.0549963686052,-122.0545188515825,-122.0544992875413,-122.0544817656615,-122.0544663287499,-122.0544530145197,-122.0544418554982,-122.0544328789475,-122.0544261067978,-122.054367616494,-122.0543189770331,-122.0543133322183,-122.0543102673313,-122.0543097910365,-122.0543119046804,-122.0543166022877,-122.0543238705783,-122.054333689005,-122.0543460298113,-122.0543608581097,-122.0543781319812,-122.0543978025926,-122.0544198143354,-122.0544441049831,-122.0544627365745,-122.0544436690341,-122.0544371618956,-122.0544330617141,-122.0544313793291,-122.0544321191885,-122.0544517158405,-122.0544550550887,-122.0544610052766,-122.0544695493725,-122.0544806629198,-122.0544943141073,-122.0545104638599,-122.0545290659507,-122.0545500671333,-122.0545734072942,-122.0545990196247,-122.0547500060545,-122.0547257886124,-122.0547246447959,-122.0547263778595,-122.0547309823617,-122.0547384438452,-122.0547487388826,-122.0548127526191,-122.0548250036827,-122.0548397028428,-122.0548568092035,-122.0548762751718,-122.0548980465897,-122.0549220628851,-122.0549482572403,-122.0551112003539,-122.0551348442215,-122.0552570524563,-122.0552863180297,-122.0553174488717,-122.0553503624716,-122.0553849715935,-122.0554211845077,-122.0554589052338,-122.0554980337948,-122.0555384664826,-122.0555800961322,-122.0556228124065,-122.0558090335081,-122.0558540822412,-122.0559000383547,-122.0559467724319,-122.0559941528653,-122.0560420462272,-122.0560903176454,-122.0561388311832,-122.056187450222,-122.056236037846,-122.056284457228,-122.0563325720144,-122.0563802467097,-122.0564273470574,-122.0567286150721,-122.0567734545558,-122.0568175161007,-122.056860683863,-122.056902844349,-122.0569438867131,-122.0569536389994,-122.0569836836046,-122.0570305830842,-122.0570767839619,-122.0571221572878,-122.0571299332457,-122.0571564234075,-122.0572031280325,-122.0572499422432,-122.0572967437876,-122.0573434104468,-122.0573898203539,-122.0578457086337,-122.0578950543173,-122.0579438171919,-122.0579918508216,-122.0580390109603,-122.058085155985,-122.0581301473213,-122.0581738498591,-122.0582161323588,-122.0585015532489,-122.0585390295659,-122.0585751057636,-122.0586096904407,-122.0586426959748,-122.0586740387444,-122.0587036393404,-122.0587314227679,-122.0587573186358,-122.0587812613354,-122.0588031902063,-122.0590240574712,-122.0590446851399,-122.0590630139289,-122.0590789935219,-122.0590925800516,-122.0591037362203,-122.059112431402,-122.0591186417267,-122.0591223501457,-122.0591235464787,-122.0591222274416,-122.0591183966553,-122.059112064636,-122.0591032487667,-122.0590919732484,-122.059078269035,-122.0590621737471,-122.0590437315698,-122.0590229931304,-122.0590000153603,-122.058974861338,-122.0589476001166,-122.0589183065337,-122.0588870610059,-122.0588539493088,-122.0588190623407,-122.0587824958734,-122.0587443502893,-122.0587047303059,-122.0583050836104,-122.0582637641324,-122.058221172293,-122.0581774268975,-122.0581326499692,-122.0581079839167,-122.0581938255234,-122.0582185934639,-122.0582410939543,-122.0582612633224,-122.0582790444927,-122.0582943871477,-122.0583072478708,-122.0583175902685,-122.0583253850736,-122.0583306102285,-122.0583332509469,-122.058333299756,-122.0583307565178,-122.058325628429,-122.0583179300013,-122.0583104834292,-122.0583232271004,-122.0583486659123,-122.058372093434,-122.0583934492351,-122.058412678229,-122.0584297308151,-122.0584445630072,-122.0584571365459,-122.0584674189984,-122.0585500422348,-122.0585582893158,-122.0585639978739,-122.0585671519271,-122.0585677426452,-122.0585657683744,-122.0585612346421,-122.0585499717723],"lat":[36.95374377559788,36.95375217410442,36.95378692388437,36.95382221497044,36.95385795888869,36.95389406603003,36.95393044587488,36.95396700722022,36.95400365840803,36.95438664841276,36.95442507495111,36.95446339333397,36.95450149794753,36.95453928376732,36.9545766466477,36.9546134836089,36.95464969312091,36.95468517538306,36.95471983259946,36.9547535692482,36.95478629234481,36.95481791169853,36.95484834016067,36.95487749386513,36.95490529245922,36.95493165932534,36.95495652179203,36.95497981133427,36.95500146376232,36.95502141939867,36.95503962324248,36.95505602512115,36.95507057982857,36.9550832472498,36.95509399247157,36.95510278587842,36.95510960323445,36.95529560535057,36.95530028131406,36.95530309913379,36.95530405162205,36.95530313634922,36.95530035564999,36.95529571661736,36.95528923108466,36.95528091559519,36.95520666086185,36.95519600065188,36.95518338213537,36.95516884069311,36.95515241709765,36.95513415739878,36.95511411279466,36.9550923394881,36.95506889852908,36.95504385564352,36.95501728104907,36.95498924925818,36.95495983886923,36.95492913234614,36.95489721578719,36.95486417868359,36.95483011366854,36.95408150622254,36.95404886586443,36.95401549285477,36.95398146872466,36.95394687659603,36.95391180097855,36.95387632756314,36.95384054301271,36.95346969937781,36.95319919836226,36.95316052872452,36.95312167396793,36.95308274393403,36.95304384867734,36.95300509815421,36.95296660191198,36.95292846877936,36.9528908065587,36.95285372172119,36.95281731910598,36.95278170162366,36.95274696996544,36.95271322231838,36.95269025474084,36.95259833415044,36.95256104604051,36.95252353991817,36.9524859149381,36.95244827056932,36.95207036343113,36.9520312789445,36.95199239309385,36.951953817186,36.95191566164081,36.95187803567499,36.9518410469896,36.95180480146164,36.95176940284107,36.95173495245378,36.95170154891154,36.95151596623851,36.95113153776646,36.95109051753361,36.95104951047693,36.95100864535026,36.95096805046204,36.95092785327243,36.95070927570033,36.95067191375458,36.95063511999781,36.95059899679796,36.95056364465746,36.95052916193364,36.95049564456507,36.95046318580459,36.9502725099756,36.95024611756327,36.95011590016411,36.95008633390434,36.95005801048243,36.95003100496954,36.9500053889439,36.94998123030088,36.94995859307319,36.94993753726099,36.94991811867303,36.94990038877852,36.94988439457084,36.94981928558181,36.94980466046943,36.94979196574881,36.94978123717039,36.94977250494773,36.94976579367225,36.94976112224406,36.94975850381871,36.94975794577014,36.94975944966993,36.9497630112828,36.94976862057866,36.94977626176075,36.94978591331019,36.94985450481581,36.94986571458652,36.9498787464065,36.94989356601246,36.94991013444064,36.94992840812932,36.94993328984168,36.94993809280956,36.94994767375401,36.94995922073834,36.94997270153321,36.94997539340799,36.94997278756697,36.94997011925936,36.9499693611753,36.9499705152945,36.949973578603,36.94997854310095,36.95003682113636,36.95004424265543,36.95005381325542,36.95006550419478,36.95007928036443,36.95009510039309,36.95011291677159,36.9501326759956,36.95015431872622,36.95030938877433,36.95033087141423,36.95035383384775,36.95037821789683,36.95040396178159,36.9504310002769,36.95045926487774,36.95048868397259,36.95051918302502,36.95055068476252,36.95058310937223,36.95093030477211,36.95096494849115,36.95100040805154,36.95103658610847,36.95107338334487,36.95111069874396,36.95114842986676,36.95118647313304,36.95122472410595,36.95126307777848,36.95130142886195,36.95133967207491,36.95137770243215,36.95141541553303,36.95145270784794,36.95148947700255,36.95152562205891,36.95156104379237,36.95159564496421,36.95162933058828,36.951662008192,36.95169358807,36.95172398353053,36.95175311113332,36.95178089091865,36.95180724662689,36.95183210590774,36.95185540051892,36.95187706651343,36.95208353879911,36.95210366986513,36.95212202951675,36.95213856654291,36.95215323481656,36.95216012360692,36.95226963228009,36.9523031804597,36.95233773368987,36.95237319419011,36.95240946161274,36.95244643332664,36.95248400470789,36.95252206943574,36.95256051979349,36.95259924697339,36.95263814138444,36.95267709296262,36.95271599148226,36.95275472686805,36.95279318950646,36.95282086334385,36.95283562998466,36.95286677044165,36.95289890286368,36.95293194436518,36.95296580971565,36.95300041155966,36.95303566064205,36.95307146603828,36.95310773538892,36.95343786500859,36.95347604332861,36.95351451677535,36.95355317763673,36.95359191767604,36.9536306284351,36.95366920153793,36.95374377559788]}]]],null,null,{"interactive":true,"className":"","stroke":true,"color":"#984EA3","weight":2,"opacity":0.9,"fill":true,"fillColor":"#984EA3","fillOpacity":0.35,"smoothFactor":1,"noClip":false},"<b>Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Status:<\/b> Active",null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addPolylines","args":[[[[{"lng":[-122.0569517782362,-122.0563117802092],"lat":[36.95206966804633,36.95293966812098]}]],[[{"lng":[-122.0560397810129,-122.0570507779434],"lat":[36.95296366813958,36.9520586680395]}]],[[{"lng":[-122.0570177780454,-122.0562687803434],"lat":[36.95210566804343,36.95301466812663]}]],[[{"lng":[-122.0572797773044,-122.0564957796395],"lat":[36.95241166803807,36.95266566809863]}]],[[{"lng":[-122.0562457804029,-122.056365779984],"lat":[36.95293266812502,36.95228366809254]}]],[[{"lng":[-122.0562407804217,-122.056939778297],"lat":[36.95297266812686,36.95232266805676]}]],[[{"lng":[-122.0549927840041,-122.0566237792534],"lat":[36.95204166817258,36.95257566808687]}]],[[{"lng":[-122.0564647796826,-122.057095777816],"lat":[36.95218766808245,36.95210966803851]}]],[[{"lng":[-122.0568327786215,-122.0570267780203],"lat":[36.95241466806718,36.95211966804339]}]],[[{"lng":[-122.0569037785341,-122.0558557815589],"lat":[36.95362266810852,36.95300266815303]}]],[[{"lng":[-122.0545357853402,-122.0569397782707],"lat":[36.95194266819855,36.95206166804682]}]],[[{"lng":[-122.0559777812473,-122.0560407809955],"lat":[36.9534766681631,36.95282066813408]}]],[[{"lng":[-122.0563837799501,-122.0568387785832],"lat":[36.95247366809859,36.95220966805901]}]],[[{"lng":[-122.0557717817874,-122.0562257804644],"lat":[36.95281566815136,36.95295766812726]}]],[[{"lng":[-122.0557837817838,-122.056251780387],"lat":[36.95312966816252,36.95295066812528]}]],[[{"lng":[-122.056812778778,-122.0570327779953],"lat":[36.95338266810531,36.95204666804022]}]],[[{"lng":[-122.0571107777566,-122.0570977777921],"lat":[36.9519586680318,36.95193066803159]}]],[[{"lng":[-122.0562037804868,-122.0562167804586],"lat":[36.95253766811272,36.95263766811568]}]],[[{"lng":[-122.0553237832104,-122.0571087777659],"lat":[36.9538386682194,36.95199266803322]}]],[[{"lng":[-122.0569667781962,-122.0558757815152],"lat":[36.95211166804697,36.95315366815744]}]],[[{"lng":[-122.0567987787526,-122.0570957778142],"lat":[36.95272166808108,36.95209166803782]}]],[[{"lng":[-122.0572147774651,-122.0562347804348],"lat":[36.95210566803065,36.95292766812554]}]],[[{"lng":[-122.0570187780341,-122.0547577849146],"lat":[36.9520226680402,36.95420266827005]}]],[[{"lng":[-122.054369786059,-122.0547007852435],"lat":[36.95421566829579,36.95579566833435]}]],[[{"lng":[-122.0569887781225,-122.0566437791864],"lat":[36.9520236680422,36.95249566808254]}]],[[{"lng":[-122.0567747787959,-122.0562647803183],"lat":[36.9524496680723,36.95264866811297]}]],[[{"lng":[-122.0569147783531,-122.0570037780793],"lat":[36.95214866805175,36.95203366804159]}]],[[{"lng":[-122.0563087801742,-122.0569407783551],"lat":[36.95250466810464,36.95292866807974]}]],[[{"lng":[-122.057192777529,-122.0556217821736],"lat":[36.95209666803172,36.95226366814012]}]],[[{"lng":[-122.0570037781003,-122.0569877781136],"lat":[36.95224166804952,36.95190566803779]}]]],null,null,{"interactive":true,"className":"","stroke":true,"color":["#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73"],"weight":2,"opacity":0.8,"fill":false,"fillColor":["#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73","#009E73"],"fillOpacity":0.2,"smoothFactor":1,"noClip":false},["<b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 391.3<br><b>Detections:<\/b> 504<br><b>Start:<\/b> 2025-11-22 09:47:13<br><b>End:<\/b> 2025-11-22 16:18:32","<b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 277.2<br><b>Detections:<\/b> 392<br><b>Start:<\/b> 2025-11-23 10:42:44<br><b>End:<\/b> 2025-11-23 15:19:55","<b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 241<br><b>Detections:<\/b> 275<br><b>Start:<\/b> 2025-11-24 11:19:33<br><b>End:<\/b> 2025-11-24 15:20:31","<b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 507.4<br><b>Detections:<\/b> 376<br><b>Start:<\/b> 2025-11-25 08:01:11<br><b>End:<\/b> 2025-11-25 16:28:38","<b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 459.1<br><b>Detections:<\/b> 501<br><b>Start:<\/b> 2025-11-26 08:40:23<br><b>End:<\/b> 2025-11-26 16:19:29","<b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 462.7<br><b>Detections:<\/b> 428<br><b>Start:<\/b> 2025-11-27 08:27:01<br><b>End:<\/b> 2025-11-27 16:09:45","<b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 537.4<br><b>Detections:<\/b> 588<br><b>Start:<\/b> 2025-11-28 07:40:07<br><b>End:<\/b> 2025-11-28 16:37:33","<b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 170.7<br><b>Detections:<\/b> 238<br><b>Start:<\/b> 2025-11-29 13:28:00<br><b>End:<\/b> 2025-11-29 16:18:39","<b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 412.5<br><b>Detections:<\/b> 403<br><b>Start:<\/b> 2025-11-30 09:31:17<br><b>End:<\/b> 2025-11-30 16:23:47","<b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 357<br><b>Detections:<\/b> 183<br><b>Start:<\/b> 2025-12-01 10:26:03<br><b>End:<\/b> 2025-12-01 16:23:06","<b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 420.6<br><b>Detections:<\/b> 213<br><b>Start:<\/b> 2025-12-02 09:09:17<br><b>End:<\/b> 2025-12-02 16:09:53","<b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 107<br><b>Detections:<\/b> 4<br><b>Start:<\/b> 2025-12-03 10:42:29<br><b>End:<\/b> 2025-12-03 12:29:31","<b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 98.3<br><b>Detections:<\/b> 93<br><b>Start:<\/b> 2025-12-06 11:45:36<br><b>End:<\/b> 2025-12-06 13:23:53","<b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 440.6<br><b>Detections:<\/b> 310<br><b>Start:<\/b> 2025-12-07 07:41:30<br><b>End:<\/b> 2025-12-07 15:02:03","<b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 404.6<br><b>Detections:<\/b> 158<br><b>Start:<\/b> 2025-12-08 07:41:28<br><b>End:<\/b> 2025-12-08 14:26:02","<b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 308.8<br><b>Detections:<\/b> 142<br><b>Start:<\/b> 2025-12-09 09:30:05<br><b>End:<\/b> 2025-12-09 14:38:51","<b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 377.7<br><b>Detections:<\/b> 211<br><b>Start:<\/b> 2025-12-10 09:38:48<br><b>End:<\/b> 2025-12-10 15:56:29","<b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 494.1<br><b>Detections:<\/b> 272<br><b>Start:<\/b> 2025-12-11 07:46:52<br><b>End:<\/b> 2025-12-11 16:00:59","<b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 526.9<br><b>Detections:<\/b> 304<br><b>Start:<\/b> 2025-12-12 07:42:36<br><b>End:<\/b> 2025-12-12 16:29:27","<b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 244.1<br><b>Detections:<\/b> 263<br><b>Start:<\/b> 2025-12-13 11:27:36<br><b>End:<\/b> 2025-12-13 15:31:39","<b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 390.2<br><b>Detections:<\/b> 212<br><b>Start:<\/b> 2025-12-14 09:01:46<br><b>End:<\/b> 2025-12-14 15:31:56","<b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 311<br><b>Detections:<\/b> 185<br><b>Start:<\/b> 2025-12-16 10:05:25<br><b>End:<\/b> 2025-12-16 15:16:22","<b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 80.2<br><b>Detections:<\/b> 30<br><b>Start:<\/b> 2025-12-17 10:48:33<br><b>End:<\/b> 2025-12-17 12:08:42","<b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> outside<br><b>Episode Type:<\/b> foray<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 5<br><b>Detections:<\/b> 20<br><b>Start:<\/b> 2025-12-17 12:09:03<br><b>End:<\/b> 2025-12-17 12:14:03","<b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 250.6<br><b>Detections:<\/b> 217<br><b>Start:<\/b> 2025-12-17 12:16:42<br><b>End:<\/b> 2025-12-17 16:27:16","<b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 256.8<br><b>Detections:<\/b> 162<br><b>Start:<\/b> 2025-12-18 11:20:09<br><b>End:<\/b> 2025-12-18 15:36:59","<b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 69.4<br><b>Detections:<\/b> 47<br><b>Start:<\/b> 2025-12-19 12:11:40<br><b>End:<\/b> 2025-12-19 13:21:03","<b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 266.4<br><b>Detections:<\/b> 48<br><b>Start:<\/b> 2025-12-21 10:03:40<br><b>End:<\/b> 2025-12-21 14:30:05","<b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 253.4<br><b>Detections:<\/b> 81<br><b>Start:<\/b> 2025-12-22 10:21:49<br><b>End:<\/b> 2025-12-22 14:35:11","<b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 38<br><b>Detections:<\/b> 13<br><b>Start:<\/b> 2025-12-23 12:43:34<br><b>End:<\/b> 2025-12-23 13:21:33"],null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addPolylines","args":[[[[{"lng":[-122.0563117802092,-122.0560397810129],"lat":[36.95293966812098,36.95296366813958]}]],[[{"lng":[-122.0570507779434,-122.0570177780454],"lat":[36.9520586680395,36.95210566804343]}]],[[{"lng":[-122.0562687803434,-122.0572797773044],"lat":[36.95301466812663,36.95241166803807]}]],[[{"lng":[-122.0564957796395,-122.0562457804029],"lat":[36.95266566809863,36.95293266812502]}]],[[{"lng":[-122.056365779984,-122.0562407804217],"lat":[36.95228366809254,36.95297266812686]}]],[[{"lng":[-122.056939778297,-122.0549927840041],"lat":[36.95232266805676,36.95204166817258]}]],[[{"lng":[-122.0566237792534,-122.0564647796826],"lat":[36.95257566808687,36.95218766808245]}]],[[{"lng":[-122.057095777816,-122.0568327786215],"lat":[36.95210966803851,36.95241466806718]}]],[[{"lng":[-122.0570267780203,-122.0569037785341],"lat":[36.95211966804339,36.95362266810852]}]],[[{"lng":[-122.0558557815589,-122.0545357853402],"lat":[36.95300266815303,36.95194266819855]}]],[[{"lng":[-122.0569397782707,-122.0559777812473],"lat":[36.95206166804682,36.9534766681631]}]],[[{"lng":[-122.0560407809955,-122.0563837799501],"lat":[36.95282066813408,36.95247366809859]}]],[[{"lng":[-122.0568387785832,-122.0557717817874],"lat":[36.95220966805901,36.95281566815136]}]],[[{"lng":[-122.0562257804644,-122.0557837817838],"lat":[36.95295766812726,36.95312966816252]}]],[[{"lng":[-122.056251780387,-122.056812778778],"lat":[36.95295066812528,36.95338266810531]}]],[[{"lng":[-122.0570327779953,-122.0571107777566],"lat":[36.95204666804022,36.9519586680318]}]],[[{"lng":[-122.0570977777921,-122.0562037804868],"lat":[36.95193066803159,36.95253766811272]}]],[[{"lng":[-122.0562167804586,-122.0553237832104],"lat":[36.95263766811568,36.9538386682194]}]],[[{"lng":[-122.0571087777659,-122.0569667781962],"lat":[36.95199266803322,36.95211166804697]}]],[[{"lng":[-122.0558757815152,-122.0567987787526],"lat":[36.95315366815744,36.95272166808108]}]],[[{"lng":[-122.0570957778142,-122.0572147774651],"lat":[36.95209166803782,36.95210566803065]}]],[[{"lng":[-122.0562347804348,-122.0570187780341],"lat":[36.95292766812554,36.9520226680402]}]],[[{"lng":[-122.0547577849146,-122.054369786059],"lat":[36.95420266827005,36.95421566829579]}]],[[{"lng":[-122.0547007852435,-122.0569887781225],"lat":[36.95579566833435,36.9520236680422]}]],[[{"lng":[-122.0566437791864,-122.0567747787959],"lat":[36.95249566808254,36.9524496680723]}]],[[{"lng":[-122.0562647803183,-122.0569147783531],"lat":[36.95264866811297,36.95214866805175]}]],[[{"lng":[-122.0570037780793,-122.0563087801742],"lat":[36.95203366804159,36.95250466810464]}]],[[{"lng":[-122.0569407783551,-122.057192777529],"lat":[36.95292866807974,36.95209666803172]}]],[[{"lng":[-122.0556217821736,-122.0570037781003],"lat":[36.95226366814012,36.95224166804952]}]]],null,null,{"interactive":true,"className":"","stroke":true,"color":"#4D4D4D","weight":1.6,"opacity":0.42,"fill":false,"fillColor":"#4D4D4D","fillOpacity":0.2,"dashArray":"4,6","smoothFactor":1,"noClip":false},["<b>Between Episodes<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>From Episode:<\/b> 1<br><b>From Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>From Type:<\/b> visit<br><b>End Time:<\/b> 2025-11-22 16:18:32<br><b>To Episode:<\/b> 2<br><b>To Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>To Type:<\/b> visit<br><b>Next Start:<\/b> 2025-11-23 10:42:44","<b>Between Episodes<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>From Episode:<\/b> 2<br><b>From Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>From Type:<\/b> visit<br><b>End Time:<\/b> 2025-11-23 15:19:55<br><b>To Episode:<\/b> 3<br><b>To Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>To Type:<\/b> visit<br><b>Next Start:<\/b> 2025-11-24 11:19:33","<b>Between Episodes<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>From Episode:<\/b> 3<br><b>From Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>From Type:<\/b> visit<br><b>End Time:<\/b> 2025-11-24 15:20:31<br><b>To Episode:<\/b> 4<br><b>To Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>To Type:<\/b> visit<br><b>Next Start:<\/b> 2025-11-25 08:01:11","<b>Between Episodes<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>From Episode:<\/b> 4<br><b>From Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>From Type:<\/b> visit<br><b>End Time:<\/b> 2025-11-25 16:28:38<br><b>To Episode:<\/b> 5<br><b>To Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>To Type:<\/b> visit<br><b>Next Start:<\/b> 2025-11-26 08:40:23","<b>Between Episodes<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>From Episode:<\/b> 5<br><b>From Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>From Type:<\/b> visit<br><b>End Time:<\/b> 2025-11-26 16:19:29<br><b>To Episode:<\/b> 6<br><b>To Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>To Type:<\/b> visit<br><b>Next Start:<\/b> 2025-11-27 08:27:01","<b>Between Episodes<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>From Episode:<\/b> 6<br><b>From Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>From Type:<\/b> visit<br><b>End Time:<\/b> 2025-11-27 16:09:45<br><b>To Episode:<\/b> 7<br><b>To Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>To Type:<\/b> visit<br><b>Next Start:<\/b> 2025-11-28 07:40:07","<b>Between Episodes<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>From Episode:<\/b> 7<br><b>From Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>From Type:<\/b> visit<br><b>End Time:<\/b> 2025-11-28 16:37:33<br><b>To Episode:<\/b> 8<br><b>To Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>To Type:<\/b> visit<br><b>Next Start:<\/b> 2025-11-29 13:28:00","<b>Between Episodes<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>From Episode:<\/b> 8<br><b>From Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>From Type:<\/b> visit<br><b>End Time:<\/b> 2025-11-29 16:18:39<br><b>To Episode:<\/b> 9<br><b>To Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>To Type:<\/b> visit<br><b>Next Start:<\/b> 2025-11-30 09:31:17","<b>Between Episodes<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>From Episode:<\/b> 9<br><b>From Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>From Type:<\/b> visit<br><b>End Time:<\/b> 2025-11-30 16:23:47<br><b>To Episode:<\/b> 10<br><b>To Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>To Type:<\/b> visit<br><b>Next Start:<\/b> 2025-12-01 10:26:03","<b>Between Episodes<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>From Episode:<\/b> 10<br><b>From Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>From Type:<\/b> visit<br><b>End Time:<\/b> 2025-12-01 16:23:06<br><b>To Episode:<\/b> 11<br><b>To Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>To Type:<\/b> visit<br><b>Next Start:<\/b> 2025-12-02 09:09:17","<b>Between Episodes<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>From Episode:<\/b> 11<br><b>From Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>From Type:<\/b> visit<br><b>End Time:<\/b> 2025-12-02 16:09:53<br><b>To Episode:<\/b> 12<br><b>To Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>To Type:<\/b> visit<br><b>Next Start:<\/b> 2025-12-03 10:42:29","<b>Between Episodes<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>From Episode:<\/b> 12<br><b>From Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>From Type:<\/b> visit<br><b>End Time:<\/b> 2025-12-03 12:29:31<br><b>To Episode:<\/b> 13<br><b>To Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>To Type:<\/b> visit<br><b>Next Start:<\/b> 2025-12-06 11:45:36","<b>Between Episodes<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>From Episode:<\/b> 13<br><b>From Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>From Type:<\/b> visit<br><b>End Time:<\/b> 2025-12-06 13:23:53<br><b>To Episode:<\/b> 14<br><b>To Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>To Type:<\/b> visit<br><b>Next Start:<\/b> 2025-12-07 07:41:30","<b>Between Episodes<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>From Episode:<\/b> 14<br><b>From Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>From Type:<\/b> visit<br><b>End Time:<\/b> 2025-12-07 15:02:03<br><b>To Episode:<\/b> 15<br><b>To Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>To Type:<\/b> visit<br><b>Next Start:<\/b> 2025-12-08 07:41:28","<b>Between Episodes<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>From Episode:<\/b> 15<br><b>From Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>From Type:<\/b> visit<br><b>End Time:<\/b> 2025-12-08 14:26:02<br><b>To Episode:<\/b> 16<br><b>To Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>To Type:<\/b> visit<br><b>Next Start:<\/b> 2025-12-09 09:30:05","<b>Between Episodes<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>From Episode:<\/b> 16<br><b>From Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>From Type:<\/b> visit<br><b>End Time:<\/b> 2025-12-09 14:38:51<br><b>To Episode:<\/b> 17<br><b>To Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>To Type:<\/b> visit<br><b>Next Start:<\/b> 2025-12-10 09:38:48","<b>Between Episodes<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>From Episode:<\/b> 17<br><b>From Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>From Type:<\/b> visit<br><b>End Time:<\/b> 2025-12-10 15:56:29<br><b>To Episode:<\/b> 18<br><b>To Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>To Type:<\/b> visit<br><b>Next Start:<\/b> 2025-12-11 07:46:52","<b>Between Episodes<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>From Episode:<\/b> 18<br><b>From Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>From Type:<\/b> visit<br><b>End Time:<\/b> 2025-12-11 16:00:59<br><b>To Episode:<\/b> 19<br><b>To Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>To Type:<\/b> visit<br><b>Next Start:<\/b> 2025-12-12 07:42:36","<b>Between Episodes<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>From Episode:<\/b> 19<br><b>From Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>From Type:<\/b> visit<br><b>End Time:<\/b> 2025-12-12 16:29:27<br><b>To Episode:<\/b> 20<br><b>To Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>To Type:<\/b> visit<br><b>Next Start:<\/b> 2025-12-13 11:27:36","<b>Between Episodes<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>From Episode:<\/b> 20<br><b>From Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>From Type:<\/b> visit<br><b>End Time:<\/b> 2025-12-13 15:31:39<br><b>To Episode:<\/b> 21<br><b>To Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>To Type:<\/b> visit<br><b>Next Start:<\/b> 2025-12-14 09:01:46","<b>Between Episodes<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>From Episode:<\/b> 21<br><b>From Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>From Type:<\/b> visit<br><b>End Time:<\/b> 2025-12-14 15:31:56<br><b>To Episode:<\/b> 22<br><b>To Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>To Type:<\/b> visit<br><b>Next Start:<\/b> 2025-12-16 10:05:25","<b>Between Episodes<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>From Episode:<\/b> 22<br><b>From Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>From Type:<\/b> visit<br><b>End Time:<\/b> 2025-12-16 15:16:22<br><b>To Episode:<\/b> 23<br><b>To Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>To Type:<\/b> visit<br><b>Next Start:<\/b> 2025-12-17 10:48:33","<b>Between Episodes<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>From Episode:<\/b> 23<br><b>From Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>From Type:<\/b> visit<br><b>End Time:<\/b> 2025-12-17 12:08:42<br><b>To Episode:<\/b> 24<br><b>To Site:<\/b> outside<br><b>To Type:<\/b> foray<br><b>Next Start:<\/b> 2025-12-17 12:09:03","<b>Between Episodes<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>From Episode:<\/b> 24<br><b>From Site:<\/b> outside<br><b>From Type:<\/b> foray<br><b>End Time:<\/b> 2025-12-17 12:14:03<br><b>To Episode:<\/b> 25<br><b>To Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>To Type:<\/b> visit<br><b>Next Start:<\/b> 2025-12-17 12:16:42","<b>Between Episodes<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>From Episode:<\/b> 25<br><b>From Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>From Type:<\/b> visit<br><b>End Time:<\/b> 2025-12-17 16:27:16<br><b>To Episode:<\/b> 26<br><b>To Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>To Type:<\/b> visit<br><b>Next Start:<\/b> 2025-12-18 11:20:09","<b>Between Episodes<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>From Episode:<\/b> 26<br><b>From Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>From Type:<\/b> visit<br><b>End Time:<\/b> 2025-12-18 15:36:59<br><b>To Episode:<\/b> 27<br><b>To Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>To Type:<\/b> visit<br><b>Next Start:<\/b> 2025-12-19 12:11:40","<b>Between Episodes<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>From Episode:<\/b> 27<br><b>From Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>From Type:<\/b> visit<br><b>End Time:<\/b> 2025-12-19 13:21:03<br><b>To Episode:<\/b> 28<br><b>To Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>To Type:<\/b> visit<br><b>Next Start:<\/b> 2025-12-21 10:03:40","<b>Between Episodes<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>From Episode:<\/b> 28<br><b>From Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>From Type:<\/b> visit<br><b>End Time:<\/b> 2025-12-21 14:30:05<br><b>To Episode:<\/b> 29<br><b>To Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>To Type:<\/b> visit<br><b>Next Start:<\/b> 2025-12-22 10:21:49","<b>Between Episodes<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>From Episode:<\/b> 29<br><b>From Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>From Type:<\/b> visit<br><b>End Time:<\/b> 2025-12-22 14:35:11<br><b>To Episode:<\/b> 30<br><b>To Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>To Type:<\/b> visit<br><b>Next Start:<\/b> 2025-12-23 12:43:34"],null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addCircleMarkers","args":[[36.95206966804633,36.95296366813958,36.95210566804343,36.95241166803807,36.95293266812502,36.95297266812686,36.95204166817258,36.95218766808245,36.95241466806718,36.95362266810852,36.95194266819855,36.9534766681631,36.95247366809859,36.95281566815136,36.95312966816252,36.95338266810531,36.9519586680318,36.95253766811272,36.9538386682194,36.95211166804697,36.95272166808108,36.95210566803065,36.9520226680402,36.95421566829579,36.9520236680422,36.9524496680723,36.95214866805175,36.95250466810464,36.95209666803172,36.95224166804952],[-122.0569517782362,-122.0560397810129,-122.0570177780454,-122.0572797773044,-122.0562457804029,-122.0562407804217,-122.0549927840041,-122.0564647796826,-122.0568327786215,-122.0569037785341,-122.0545357853402,-122.0559777812473,-122.0563837799501,-122.0557717817874,-122.0557837817838,-122.056812778778,-122.0571107777566,-122.0562037804868,-122.0553237832104,-122.0569667781962,-122.0567987787526,-122.0572147774651,-122.0570187780341,-122.054369786059,-122.0569887781225,-122.0567747787959,-122.0569147783531,-122.0563087801742,-122.057192777529,-122.0570037781003],3,null,null,{"interactive":true,"className":"","stroke":true,"color":"black","weight":1,"opacity":0.5,"fill":true,"fillColor":["#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#E41A1C","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3"],"fillOpacity":0.85},null,null,["<b>Start Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 391.3<br><b>Detections:<\/b> 504<br><b>Start:<\/b> 2025-11-22 09:47:13","<b>Start Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 277.2<br><b>Detections:<\/b> 392<br><b>Start:<\/b> 2025-11-23 10:42:44","<b>Start Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 241<br><b>Detections:<\/b> 275<br><b>Start:<\/b> 2025-11-24 11:19:33","<b>Start Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 507.4<br><b>Detections:<\/b> 376<br><b>Start:<\/b> 2025-11-25 08:01:11","<b>Start Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 459.1<br><b>Detections:<\/b> 501<br><b>Start:<\/b> 2025-11-26 08:40:23","<b>Start Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 462.7<br><b>Detections:<\/b> 428<br><b>Start:<\/b> 2025-11-27 08:27:01","<b>Start Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 537.4<br><b>Detections:<\/b> 588<br><b>Start:<\/b> 2025-11-28 07:40:07","<b>Start Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 170.7<br><b>Detections:<\/b> 238<br><b>Start:<\/b> 2025-11-29 13:28:00","<b>Start Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 412.5<br><b>Detections:<\/b> 403<br><b>Start:<\/b> 2025-11-30 09:31:17","<b>Start Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 357<br><b>Detections:<\/b> 183<br><b>Start:<\/b> 2025-12-01 10:26:03","<b>Start Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 420.6<br><b>Detections:<\/b> 213<br><b>Start:<\/b> 2025-12-02 09:09:17","<b>Start Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 107<br><b>Detections:<\/b> 4<br><b>Start:<\/b> 2025-12-03 10:42:29","<b>Start Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 98.3<br><b>Detections:<\/b> 93<br><b>Start:<\/b> 2025-12-06 11:45:36","<b>Start Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 440.6<br><b>Detections:<\/b> 310<br><b>Start:<\/b> 2025-12-07 07:41:30","<b>Start Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 404.6<br><b>Detections:<\/b> 158<br><b>Start:<\/b> 2025-12-08 07:41:28","<b>Start Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 308.8<br><b>Detections:<\/b> 142<br><b>Start:<\/b> 2025-12-09 09:30:05","<b>Start Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 377.7<br><b>Detections:<\/b> 211<br><b>Start:<\/b> 2025-12-10 09:38:48","<b>Start Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 494.1<br><b>Detections:<\/b> 272<br><b>Start:<\/b> 2025-12-11 07:46:52","<b>Start Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 526.9<br><b>Detections:<\/b> 304<br><b>Start:<\/b> 2025-12-12 07:42:36","<b>Start Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 244.1<br><b>Detections:<\/b> 263<br><b>Start:<\/b> 2025-12-13 11:27:36","<b>Start Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 390.2<br><b>Detections:<\/b> 212<br><b>Start:<\/b> 2025-12-14 09:01:46","<b>Start Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 311<br><b>Detections:<\/b> 185<br><b>Start:<\/b> 2025-12-16 10:05:25","<b>Start Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 80.2<br><b>Detections:<\/b> 30<br><b>Start:<\/b> 2025-12-17 10:48:33","<b>Start Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> outside<br><b>Episode Type:<\/b> foray<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 5<br><b>Detections:<\/b> 20<br><b>Start:<\/b> 2025-12-17 12:09:03","<b>Start Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 250.6<br><b>Detections:<\/b> 217<br><b>Start:<\/b> 2025-12-17 12:16:42","<b>Start Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 256.8<br><b>Detections:<\/b> 162<br><b>Start:<\/b> 2025-12-18 11:20:09","<b>Start Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 69.4<br><b>Detections:<\/b> 47<br><b>Start:<\/b> 2025-12-19 12:11:40","<b>Start Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 266.4<br><b>Detections:<\/b> 48<br><b>Start:<\/b> 2025-12-21 10:03:40","<b>Start Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 253.4<br><b>Detections:<\/b> 81<br><b>Start:<\/b> 2025-12-22 10:21:49","<b>Start Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 38<br><b>Detections:<\/b> 13<br><b>Start:<\/b> 2025-12-23 12:43:34"],null,["START | B940D5C9 | visit | detections: 504","START | B940D5C9 | visit | detections: 392","START | B940D5C9 | visit | detections: 275","START | B940D5C9 | visit | detections: 376","START | B940D5C9 | visit | detections: 501","START | B940D5C9 | visit | detections: 428","START | B940D5C9 | visit | detections: 588","START | B940D5C9 | visit | detections: 238","START | B940D5C9 | visit | detections: 403","START | B940D5C9 | visit | detections: 183","START | B940D5C9 | visit | detections: 213","START | B940D5C9 | visit | detections: 4","START | B940D5C9 | visit | detections: 93","START | B940D5C9 | visit | detections: 310","START | B940D5C9 | visit | detections: 158","START | B940D5C9 | visit | detections: 142","START | B940D5C9 | visit | detections: 211","START | B940D5C9 | visit | detections: 272","START | B940D5C9 | visit | detections: 304","START | B940D5C9 | visit | detections: 263","START | B940D5C9 | visit | detections: 212","START | B940D5C9 | visit | detections: 185","START | B940D5C9 | visit | detections: 30","START | B940D5C9 | foray | detections: 20","START | B940D5C9 | visit | detections: 217","START | B940D5C9 | visit | detections: 162","START | B940D5C9 | visit | detections: 47","START | B940D5C9 | visit | detections: 48","START | B940D5C9 | visit | detections: 81","START | B940D5C9 | visit | detections: 13"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addCircleMarkers","args":[[36.95293966812098,36.9520586680395,36.95301466812663,36.95266566809863,36.95228366809254,36.95232266805676,36.95257566808687,36.95210966803851,36.95211966804339,36.95300266815303,36.95206166804682,36.95282066813408,36.95220966805901,36.95295766812726,36.95295066812528,36.95204666804022,36.95193066803159,36.95263766811568,36.95199266803322,36.95315366815744,36.95209166803782,36.95292766812554,36.95420266827005,36.95579566833435,36.95249566808254,36.95264866811297,36.95203366804159,36.95292866807974,36.95226366814012,36.95190566803779],[-122.0563117802092,-122.0570507779434,-122.0562687803434,-122.0564957796395,-122.056365779984,-122.056939778297,-122.0566237792534,-122.057095777816,-122.0570267780203,-122.0558557815589,-122.0569397782707,-122.0560407809955,-122.0568387785832,-122.0562257804644,-122.056251780387,-122.0570327779953,-122.0570977777921,-122.0562167804586,-122.0571087777659,-122.0558757815152,-122.0570957778142,-122.0562347804348,-122.0547577849146,-122.0547007852435,-122.0566437791864,-122.0562647803183,-122.0570037780793,-122.0569407783551,-122.0556217821736,-122.0569877781136],4,null,null,{"interactive":true,"className":"","stroke":true,"color":"black","weight":1,"opacity":0.5,"fill":true,"fillColor":["#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#E41A1C","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3","#984EA3"],"fillOpacity":0.85},null,null,["<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 391.3<br><b>Detections:<\/b> 504<br><b>End:<\/b> 2025-11-22 16:18:32","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 277.2<br><b>Detections:<\/b> 392<br><b>End:<\/b> 2025-11-23 15:19:55","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 241<br><b>Detections:<\/b> 275<br><b>End:<\/b> 2025-11-24 15:20:31","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 507.4<br><b>Detections:<\/b> 376<br><b>End:<\/b> 2025-11-25 16:28:38","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 459.1<br><b>Detections:<\/b> 501<br><b>End:<\/b> 2025-11-26 16:19:29","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 462.7<br><b>Detections:<\/b> 428<br><b>End:<\/b> 2025-11-27 16:09:45","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 537.4<br><b>Detections:<\/b> 588<br><b>End:<\/b> 2025-11-28 16:37:33","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 170.7<br><b>Detections:<\/b> 238<br><b>End:<\/b> 2025-11-29 16:18:39","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 412.5<br><b>Detections:<\/b> 403<br><b>End:<\/b> 2025-11-30 16:23:47","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 357<br><b>Detections:<\/b> 183<br><b>End:<\/b> 2025-12-01 16:23:06","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 420.6<br><b>Detections:<\/b> 213<br><b>End:<\/b> 2025-12-02 16:09:53","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 107<br><b>Detections:<\/b> 4<br><b>End:<\/b> 2025-12-03 12:29:31","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 98.3<br><b>Detections:<\/b> 93<br><b>End:<\/b> 2025-12-06 13:23:53","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 440.6<br><b>Detections:<\/b> 310<br><b>End:<\/b> 2025-12-07 15:02:03","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 404.6<br><b>Detections:<\/b> 158<br><b>End:<\/b> 2025-12-08 14:26:02","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 308.8<br><b>Detections:<\/b> 142<br><b>End:<\/b> 2025-12-09 14:38:51","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 377.7<br><b>Detections:<\/b> 211<br><b>End:<\/b> 2025-12-10 15:56:29","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 494.1<br><b>Detections:<\/b> 272<br><b>End:<\/b> 2025-12-11 16:00:59","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 526.9<br><b>Detections:<\/b> 304<br><b>End:<\/b> 2025-12-12 16:29:27","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 244.1<br><b>Detections:<\/b> 263<br><b>End:<\/b> 2025-12-13 15:31:39","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 390.2<br><b>Detections:<\/b> 212<br><b>End:<\/b> 2025-12-14 15:31:56","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 311<br><b>Detections:<\/b> 185<br><b>End:<\/b> 2025-12-16 15:16:22","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 80.2<br><b>Detections:<\/b> 30<br><b>End:<\/b> 2025-12-17 12:08:42","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> outside<br><b>Episode Type:<\/b> foray<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 5<br><b>Detections:<\/b> 20<br><b>End:<\/b> 2025-12-17 12:14:03","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 250.6<br><b>Detections:<\/b> 217<br><b>End:<\/b> 2025-12-17 16:27:16","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 256.8<br><b>Detections:<\/b> 162<br><b>End:<\/b> 2025-12-18 15:36:59","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 69.4<br><b>Detections:<\/b> 47<br><b>End:<\/b> 2025-12-19 13:21:03","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 266.4<br><b>Detections:<\/b> 48<br><b>End:<\/b> 2025-12-21 14:30:05","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 253.4<br><b>Detections:<\/b> 81<br><b>End:<\/b> 2025-12-22 14:35:11","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 38<br><b>Detections:<\/b> 13<br><b>End:<\/b> 2025-12-23 13:21:33"],null,["END | B940D5C9 | visit | detections: 504","END | B940D5C9 | visit | detections: 392","END | B940D5C9 | visit | detections: 275","END | B940D5C9 | visit | detections: 376","END | B940D5C9 | visit | detections: 501","END | B940D5C9 | visit | detections: 428","END | B940D5C9 | visit | detections: 588","END | B940D5C9 | visit | detections: 238","END | B940D5C9 | visit | detections: 403","END | B940D5C9 | visit | detections: 183","END | B940D5C9 | visit | detections: 213","END | B940D5C9 | visit | detections: 4","END | B940D5C9 | visit | detections: 93","END | B940D5C9 | visit | detections: 310","END | B940D5C9 | visit | detections: 158","END | B940D5C9 | visit | detections: 142","END | B940D5C9 | visit | detections: 211","END | B940D5C9 | visit | detections: 272","END | B940D5C9 | visit | detections: 304","END | B940D5C9 | visit | detections: 263","END | B940D5C9 | visit | detections: 212","END | B940D5C9 | visit | detections: 185","END | B940D5C9 | visit | detections: 30","END | B940D5C9 | foray | detections: 20","END | B940D5C9 | visit | detections: 217","END | B940D5C9 | visit | detections: 162","END | B940D5C9 | visit | detections: 47","END | B940D5C9 | visit | detections: 48","END | B940D5C9 | visit | detections: 81","END | B940D5C9 | visit | detections: 13"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addCircleMarkers","args":[[36.95293966812098,36.9520586680395,36.95301466812663,36.95266566809863,36.95228366809254,36.95232266805676,36.95257566808687,36.95210966803851,36.95211966804339,36.95300266815303,36.95206166804682,36.95282066813408,36.95220966805901,36.95295766812726,36.95295066812528,36.95204666804022,36.95193066803159,36.95263766811568,36.95199266803322,36.95315366815744,36.95209166803782,36.95292766812554,36.95420266827005,36.95579566833435,36.95249566808254,36.95264866811297,36.95203366804159,36.95292866807974,36.95226366814012,36.95190566803779],[-122.0563117802092,-122.0570507779434,-122.0562687803434,-122.0564957796395,-122.056365779984,-122.056939778297,-122.0566237792534,-122.057095777816,-122.0570267780203,-122.0558557815589,-122.0569397782707,-122.0560407809955,-122.0568387785832,-122.0562257804644,-122.056251780387,-122.0570327779953,-122.0570977777921,-122.0562167804586,-122.0571087777659,-122.0558757815152,-122.0570957778142,-122.0562347804348,-122.0547577849146,-122.0547007852435,-122.0566437791864,-122.0562647803183,-122.0570037780793,-122.0569407783551,-122.0556217821736,-122.0569877781136],1,null,null,{"interactive":true,"className":"","stroke":false,"color":"#03F","weight":5,"opacity":0.5,"fill":true,"fillColor":"black","fillOpacity":1},null,null,["<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 391.3<br><b>Detections:<\/b> 504<br><b>End:<\/b> 2025-11-22 16:18:32","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 277.2<br><b>Detections:<\/b> 392<br><b>End:<\/b> 2025-11-23 15:19:55","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 241<br><b>Detections:<\/b> 275<br><b>End:<\/b> 2025-11-24 15:20:31","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 507.4<br><b>Detections:<\/b> 376<br><b>End:<\/b> 2025-11-25 16:28:38","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 459.1<br><b>Detections:<\/b> 501<br><b>End:<\/b> 2025-11-26 16:19:29","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 462.7<br><b>Detections:<\/b> 428<br><b>End:<\/b> 2025-11-27 16:09:45","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 537.4<br><b>Detections:<\/b> 588<br><b>End:<\/b> 2025-11-28 16:37:33","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 170.7<br><b>Detections:<\/b> 238<br><b>End:<\/b> 2025-11-29 16:18:39","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 412.5<br><b>Detections:<\/b> 403<br><b>End:<\/b> 2025-11-30 16:23:47","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 357<br><b>Detections:<\/b> 183<br><b>End:<\/b> 2025-12-01 16:23:06","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 420.6<br><b>Detections:<\/b> 213<br><b>End:<\/b> 2025-12-02 16:09:53","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 107<br><b>Detections:<\/b> 4<br><b>End:<\/b> 2025-12-03 12:29:31","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 98.3<br><b>Detections:<\/b> 93<br><b>End:<\/b> 2025-12-06 13:23:53","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 440.6<br><b>Detections:<\/b> 310<br><b>End:<\/b> 2025-12-07 15:02:03","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 404.6<br><b>Detections:<\/b> 158<br><b>End:<\/b> 2025-12-08 14:26:02","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 308.8<br><b>Detections:<\/b> 142<br><b>End:<\/b> 2025-12-09 14:38:51","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 377.7<br><b>Detections:<\/b> 211<br><b>End:<\/b> 2025-12-10 15:56:29","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 494.1<br><b>Detections:<\/b> 272<br><b>End:<\/b> 2025-12-11 16:00:59","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 526.9<br><b>Detections:<\/b> 304<br><b>End:<\/b> 2025-12-12 16:29:27","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 244.1<br><b>Detections:<\/b> 263<br><b>End:<\/b> 2025-12-13 15:31:39","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 390.2<br><b>Detections:<\/b> 212<br><b>End:<\/b> 2025-12-14 15:31:56","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 311<br><b>Detections:<\/b> 185<br><b>End:<\/b> 2025-12-16 15:16:22","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 80.2<br><b>Detections:<\/b> 30<br><b>End:<\/b> 2025-12-17 12:08:42","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> outside<br><b>Episode Type:<\/b> foray<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 5<br><b>Detections:<\/b> 20<br><b>End:<\/b> 2025-12-17 12:14:03","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 250.6<br><b>Detections:<\/b> 217<br><b>End:<\/b> 2025-12-17 16:27:16","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 256.8<br><b>Detections:<\/b> 162<br><b>End:<\/b> 2025-12-18 15:36:59","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 69.4<br><b>Detections:<\/b> 47<br><b>End:<\/b> 2025-12-19 13:21:03","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 266.4<br><b>Detections:<\/b> 48<br><b>End:<\/b> 2025-12-21 14:30:05","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 253.4<br><b>Detections:<\/b> 81<br><b>End:<\/b> 2025-12-22 14:35:11","<b>End Point<\/b><br><b>Tag:<\/b> B940D5C9<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Natural Bridges<br><b>Episode Site:<\/b> Natural Bridges State Beach, Santa Cruz<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> winter<br><b>Duration min:<\/b> 38<br><b>Detections:<\/b> 13<br><b>End:<\/b> 2025-12-23 13:21:33"],null,["END | B940D5C9 | visit | detections: 504","END | B940D5C9 | visit | detections: 392","END | B940D5C9 | visit | detections: 275","END | B940D5C9 | visit | detections: 376","END | B940D5C9 | visit | detections: 501","END | B940D5C9 | visit | detections: 428","END | B940D5C9 | visit | detections: 588","END | B940D5C9 | visit | detections: 238","END | B940D5C9 | visit | detections: 403","END | B940D5C9 | visit | detections: 183","END | B940D5C9 | visit | detections: 213","END | B940D5C9 | visit | detections: 4","END | B940D5C9 | visit | detections: 93","END | B940D5C9 | visit | detections: 310","END | B940D5C9 | visit | detections: 158","END | B940D5C9 | visit | detections: 142","END | B940D5C9 | visit | detections: 211","END | B940D5C9 | visit | detections: 272","END | B940D5C9 | visit | detections: 304","END | B940D5C9 | visit | detections: 263","END | B940D5C9 | visit | detections: 212","END | B940D5C9 | visit | detections: 185","END | B940D5C9 | visit | detections: 30","END | B940D5C9 | foray | detections: 20","END | B940D5C9 | visit | detections: 217","END | B940D5C9 | visit | detections: 162","END | B940D5C9 | visit | detections: 47","END | B940D5C9 | visit | detections: 48","END | B940D5C9 | visit | detections: 81","END | B940D5C9 | visit | detections: 13"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLegend","args":[{"colors":["#009E73"],"labels":["winter"],"na_color":null,"na_label":"NA","opacity":1,"position":"bottomright","type":"factor","title":"Behavior Type","extra":null,"layerId":null,"className":"info legend","group":null}]},{"method":"addLegend","args":[{"colors":["#984EA3","#BDBDBD"],"labels":["Active","Other"],"na_color":null,"na_label":"NA","opacity":1,"position":"topleft","type":"factor","title":"Site Status","extra":null,"layerId":null,"className":"info legend","group":null}]},{"method":"addControl","args":["<div style='background: white;padding: 8px 10px;border-radius: 4px;box-shadow: 0 1px 5px rgba(0,0,0,0.35);font-size: 14px;line-height: 18px;'><div style='font-weight: bold; margin-bottom: 4px;'>Episode Type<\/div><div><span style='display: inline-block;width: 10px;height: 10px;border-radius: 50%;background: #E41A1C;border: 1px solid black;margin-right: 6px;'><\/span>foray<\/div><div><span style='display: inline-block;width: 10px;height: 10px;border-radius: 50%;background: #984EA3;border: 1px solid black;margin-right: 6px;'><\/span>visit<\/div><\/div>","bottomleft",null,"info legend"]}],"limits":{"lat":[36.94975794577014,36.95579566833435],"lng":[-122.0591235464787,-122.0543097910365]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

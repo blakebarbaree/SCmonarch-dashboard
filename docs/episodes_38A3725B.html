@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Episode Explorer - 38A3725B – Santa Cruz Monarch Movement Dashboard</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+
+<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+
+<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
+
+<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+
+<script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
+
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+
+<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+
+<script src="site_libs/leaflet-binding-2.2.3/leaflet.js"></script>
+
+<script src="site_libs/leaflet-providers-3.0.0/leaflet-providers.js"></script>
+
+<script src="site_libs/leaflet-providers-plugin-2.2.3/leaflet-providers-plugin.js"></script>
+
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#tag-38a3725b" id="toc-tag-38a3725b" class="nav-link active" data-scroll-target="#tag-38a3725b">Tag: 38A3725B</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Episode Explorer - 38A3725B</h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-page-left">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div style="margin-bottom:15px;">
+<label><b>Select Tag:</b></label><br><select onchange="window.location=this.value"><option value="episodes_013EFFF1.html">013EFFF1</option><option value="episodes_04E1C314.html">04E1C314</option><option value="episodes_08F73F9E.html">08F73F9E</option><option value="episodes_0C1A306A.html">0C1A306A</option><option value="episodes_0CE40498.html">0CE40498</option><option value="episodes_0CE7CA9D.html">0CE7CA9D</option><option value="episodes_0E11CEFD.html">0E11CEFD</option><option value="episodes_18A030A0.html">18A030A0</option><option value="episodes_1C09A3A6.html">1C09A3A6</option><option value="episodes_2B58DD6C.html">2B58DD6C</option><option value="episodes_345A251C.html">345A251C</option><option value="episodes_36F944CB.html">36F944CB</option><option value="episodes_38A3725B.html" selected="">38A3725B</option><option value="episodes_3B660685.html">3B660685</option><option value="episodes_3D01741D.html">3D01741D</option><option value="episodes_43D0FD09.html">43D0FD09</option><option value="episodes_4400DAD8.html">4400DAD8</option><option value="episodes_480CB043.html">480CB043</option><option value="episodes_4A0A9F0B.html">4A0A9F0B</option><option value="episodes_5B44443D.html">5B44443D</option><option value="episodes_6F001664.html">6F001664</option><option value="episodes_8100F39A.html">8100F39A</option><option value="episodes_91E9B5F8.html">91E9B5F8</option><option value="episodes_A496835F.html">A496835F</option><option value="episodes_A9545E9B.html">A9545E9B</option><option value="episodes_A9DA911C.html">A9DA911C</option><option value="episodes_AF25EE40.html">AF25EE40</option><option value="episodes_AF8F955E.html">AF8F955E</option><option value="episodes_B940D5C9.html">B940D5C9</option><option value="episodes_BA74FD2A.html">BA74FD2A</option><option value="episodes_C1AEFFB4.html">C1AEFFB4</option><option value="episodes_C27B57C8.html">C27B57C8</option><option value="episodes_D0837EEE.html">D0837EEE</option><option value="episodes_D130CD6D.html">D130CD6D</option><option value="episodes_D72E44EE.html">D72E44EE</option><option value="episodes_DD65DD49.html">DD65DD49</option><option value="episodes_E3BABA94.html">E3BABA94</option><option value="episodes_E486B67D.html">E486B67D</option><option value="episodes_EFCEA373.html">EFCEA373</option><option value="episodes_F589923A.html">F589923A</option><option value="episodes_F6BA554F.html">F6BA554F</option></select>
+</div>
+<section id="tag-38a3725b" class="level3">
+<h3 class="anchored" data-anchor-id="tag-38a3725b">Tag: 38A3725B</h3>
+<p>Interactive map of detection episodes or consecutive detections inside or outside of a overwintering site boundary.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="htmlwidget-44754b19504996ac830e" style="width:100%;height:600px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-44754b19504996ac830e">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}},"preferCanvas":true},"calls":[{"method":"addProviderTiles","args":["Esri.WorldTopoMap",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addPolygons","args":[[[[{"lng":[-121.9767047213325,-121.9767118894308,-121.9767292893737,-121.9767444574132,-121.976757354128,-121.9767679459997,-121.9767762055004,-121.9767821111637,-121.9767856476411,-121.9767868057412,-121.9767866135264,-121.9767851708383,-121.976780918069,-121.9767738682816,-121.9767640431307,-121.9767514727959,-121.9767361958895,-121.9767182593369,-121.9766977182338,-121.9765831817975,-121.9770562574235,-121.9770884387078,-121.9771187056376,-121.9771469749915,-121.9771731690408,-121.9771972157629,-121.9772190490392,-121.9772386088375,-121.9772558413766,-121.9772706992742,-121.9772831416773,-121.9772931343746,-121.9773006498904,-121.97730566756,-121.9773081735871,-121.9773081610811,-121.9773056300764,-121.9772710917903,-121.9772658974121,-121.9772580844572,-121.9772476754515,-121.9772347004059,-121.9772191967294,-121.9772012091217,-121.9771807894437,-121.9771579965687,-121.9771328962121,-121.9771055607423,-121.9770760689716,-121.9770445059295,-121.9763378636348,-121.9763050145828,-121.9762703551142,-121.9762339811752,-121.9761959934583,-121.976156497123,-121.9761156015056,-121.9760734198154,-121.9760300688222,-121.9759856685327,-121.9759403418582,-121.9758942142746,-121.975847413475,-121.9758000690157,-121.9757523119586,-121.9757042745074,-121.9756560896419,-121.9756078907503,-121.9755598112595,-121.9755119842658,-121.9754645421666,-121.975256828925,-121.9752115787726,-121.9751989897461,-121.9751916034857,-121.9751452852947,-121.9750981953219,-121.9750504677251,-121.9750022384788,-121.9749536449867,-121.9749048256901,-121.9748559196737,-121.9748070662693,-121.9747584046586,-121.9747100734771,-121.9746622104189,-121.9746149518443,-121.9745684323917,-121.9745227845934,-121.9744781384986,-121.9735767297331,-121.9732614692332,-121.9732135801867,-121.9731659553748,-121.9731187257026,-121.9730720209889,-121.9730259696097,-121.972980698145,-121.9729363310312,-121.972892990219,-121.9728507948381,-121.9728098608696,-121.9727703008277,-121.9727322234498,-121.9726957333982,-121.972660930972,-121.9726279118318,-121.9725967667361,-121.9725675812928,-121.972540435723,-121.9725154046409,-121.9724925568488,-121.9724719551477,-121.9724536561651,-121.9724377101987,-121.9724241610787,-121.9724130460473,-121.9724043956561,-121.972398233682,-121.9723945770624,-121.9723745581302,-121.9723734167494,-121.9723747867064,-121.9723786642465,-121.972385038742,-121.9723938927216,-121.9724052019184,-121.9724189353359,-121.9724350553335,-121.9724535177294,-121.9724742719217,-121.972497261027,-121.9725224220368,-121.9725496859894,-121.9725789781596,-121.9726102182632,-121.972643320677,-121.9726781946736,-121.9727147446701,-121.97275287049,-121.9727924676377,-121.972833427585,-121.9728756380684,-121.9729189833973,-121.9729633447703,-121.9730086006014,-121.973054626853,-121.973101297376,-121.9731446692905,-121.9731667243689,-121.9731935208863,-121.9732221736751,-121.973472985232,-121.9735061208608,-121.9735412610542,-121.9735783007464,-121.9736171291925,-121.9736576302995,-121.9736996829731,-121.9737431614802,-121.9737879358243,-121.9738894762742,-121.9739831607551,-121.9740091489218,-121.9740366617364,-121.9740656402084,-121.9740960222046,-121.9742083472807,-121.9742039439501,-121.9741928397702,-121.9741841223788,-121.9741778149996,-121.9741739344359,-121.9741724910258,-121.9741697026116,-121.9741706819665,-121.9741740596073,-121.9741798266836,-121.9741879680844,-121.9741984624771,-121.9742112823639,-121.9742263941533,-121.9742437582489,-121.9742633291522,-121.9742850555828,-121.9742870242013,-121.9742854871939,-121.9742814524789,-121.9742799638132,-121.9742810253401,-121.9742846341052,-121.9743323209904,-121.9743386014384,-121.9743474935936,-121.9743589718034,-121.9743730029551,-121.9743895465707,-121.9744085549247,-121.9744299731806,-121.9744537395503,-121.9744797854712,-121.9745080358051,-121.9745384090539,-121.9745708175955,-121.9746051679362,-121.9746413609806,-121.9746792923173,-121.9747188525201,-121.974759927464,-121.974802398654,-121.9750418735203,-121.9750917441169,-121.9751430775831,-121.9754787536479,-121.9755243531699,-121.9755707822991,-121.9756179103415,-121.9756656046356,-121.9757137309261,-121.9757621537416,-121.9758107367759,-121.975859343272,-121.9759078364066,-121.9759560796759,-121.9760039372789,-121.9760512745006,-121.976465640977,-121.9765112919178,-121.9765561951995,-121.9766002299948,-121.9766432778132,-121.9766852228203,-121.9767259521488,-121.9767653562028,-121.9768033289525,-121.9768397682195,-121.9768745759517,-121.9769076584872,-121.9769389268064,-121.9769682967713,-121.9769956893523,-121.9770210308402,-121.9770442530455,-121.9770652934809,-121.9770840955302,-121.9771006086,-121.9771147882564,-121.9771265963444,-121.9771360010902,-121.9771429771873,-121.9771475058641,-121.9771495749347,-121.9771491788316,-121.9771463186206,-121.977141001998,-121.9771332432701,-121.9771230633143,-121.9771104895232,-121.9770955557307,-121.9770783021214,-121.9770587751217,-121.9770370272757,-121.9769601037199,-121.9769208601391,-121.9769120538051,-121.9769011030311,-121.9768880340908,-121.97687287834,-121.9768556721412,-121.9768364567762,-121.9768152783477,-121.9767047213325],"lat":[36.95837527129295,36.95838767270646,36.95842231280739,36.95845761646595,36.95849349192783,36.95852984595283,36.95856658405705,36.95860361075852,36.95864082982536,36.95867814452583,36.95889819801558,36.95893876038197,36.95897919656257,36.9590193823508,36.95905919430935,36.95909851014939,36.9591372091062,36.95917517231009,36.95921228315152,36.95940461899397,36.95980221761302,36.95983072528379,36.95986054167451,36.95989158480109,36.95992376930653,36.9599570066956,36.95999120557808,36.96002627192023,36.96006210930317,36.96009861918816,36.96013570118743,36.96017325334033,36.96021117239358,36.96024935408524,36.96028769343139,36.96032608501478,36.96036442327468,36.96071337289531,36.96075246603753,36.96079128002008,36.96082970293664,36.96086762400856,36.96090493390425,36.96094152505435,36.96097729196195,36.96101213150664,36.96104594324185,36.96107862968446,36.96111009659583,36.96114025325343,36.96177970611517,36.96180790063526,36.96183467560196,36.96185995689681,36.96188367453627,36.96190576286529,36.96192616073916,36.96194481169275,36.96196166409671,36.96197667130048,36.96198979176139,36.96200098915961,36.96201023249874,36.96201749619155,36.96202276013086,36.96202600974515,36.96202723603892,36.96202643561755,36.96202361069678,36.96201876909643,36.96201192421897,36.96197742400172,36.96196894615035,36.96196604222884,36.96196840095075,36.96198094670697,36.96199149986625,36.9620000303638,36.96200651389714,36.96201093199549,36.96201327207211,36.96201352746039,36.96201169743281,36.96200778720287,36.96200180791036,36.96199377658966,36.96198371612109,36.96197165516583,36.96195762808421,36.9619416748379,36.96159622318634,36.96158294176788,36.96157991667189,36.96157489026273,36.9615678763559,36.9615588942298,36.96154796857266,36.9615351294147,36.96152041204557,36.96150385691741,36.96148550953366,36.96146542032396,36.96144364450561,36.96142024193176,36.96139527692691,36.96136881811021,36.96134093820667,36.96131171384751,36.9612812253594,36.96124955654369,36.96121679444617,36.96118302911771,36.96114835336684,36.96111286250462,36.96107665408272,36.96103982762525,36.96100248435522,36.96096472691634,36.96092665909086,36.96088838551434,36.96056857277389,36.9605302534484,36.96049193888621,36.9604537341003,36.96041574380288,36.96037807211853,36.96034082229862,36.96030409643852,36.96026799519756,36.96023261752331,36.96019806038026,36.96016441848413,36.96013178404215,36.96010024650047,36.96006989229881,36.96004080463374,36.96001306323046,36.95998674412434,36.95996191945252,36.95993865725617,36.959917021294,36.95989707086743,36.9598788606581,36.95986244057794,36.95984785563249,36.95983514579729,36.95982434590854,36.95981548556751,36.95980914662826,36.95978161568067,36.95975160772291,36.95972271553208,36.95948248902236,36.95945246037159,36.95942392384279,36.95939696475904,36.95937166372697,36.95934809639575,36.959326333231,36.95930643930394,36.95928847409689,36.95925047311516,36.95914910492506,36.95912230655231,36.95909649821347,36.95907173524557,36.95904807074431,36.95896454492114,36.95895269465734,36.95891596054653,36.95887881752616,36.95884136454711,36.95880370138612,36.95876592838007,36.95829336244329,36.95825589181024,36.95821851029569,36.95818131584873,36.95814440592844,36.95810787724842,36.95807182552354,36.95803634521905,36.95800152930305,36.95796746900286,36.95793425356599,36.95793158603671,36.95792263271112,36.95788414046307,36.95784553173197,36.95780691397481,36.95776839467392,36.9573927887233,36.95735378415368,36.9573151052811,36.95727686368868,36.95723916969833,36.95720213205234,36.95716585759967,36.95713045098771,36.9570960143604,36.95706264706351,36.95703044535805,36.95699950214253,36.95696990668498,36.95694174436539,36.95691509642936,36.95689003975372,36.95686664662474,36.9568449845296,36.95682511596161,36.95671988248233,36.95669952814615,36.95668164620989,36.95657434444608,36.95656087807458,36.95654936323051,36.95653983232805,36.95653231219667,36.95652682400546,36.95652338320365,36.95652199947714,36.95652267672106,36.95652541302898,36.95653020069821,36.9565370262515,36.95654587047491,36.95663261348074,36.9566431883343,36.95665564061934,36.95666993682786,36.95668603849012,36.95670390227804,36.95672348012189,36.95674471933962,36.95676756277861,36.9567919489695,36.95681781229163,36.9568450831496,36.95687368816049,36.95690355035149,36.95693458936693,36.95696672168454,36.95699986084018,36.95703391766061,36.95706880050334,36.9571044155033,36.95714066682543,36.95717745692257,36.95721468679785,36.95725225627125,36.95729006424911,36.95732800899606,36.9573659884089,36.9574039002913,36.95744164262877,36.95747911386326,36.95751621316631,36.95755284071038,36.95758889793753,36.95762428782457,36.95765891514414,36.95769268672091,36.95780488691869,36.95798433724212,36.95801950370766,36.95805428338967,36.9580885928435,36.95812234975276,36.95815547312689,36.95818788349541,36.9582195030986,36.95837527129295]}]]],null,null,{"interactive":true,"className":"","stroke":true,"color":"#984EA3","weight":2,"opacity":0.9,"fill":true,"fillColor":"#984EA3","fillOpacity":0.35,"smoothFactor":1,"noClip":false},"<b>Site:<\/b> Moran Lake, Moran Lake<br><b>Status:<\/b> Active",null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addPolylines","args":[[],null,null,{"interactive":true,"className":"","stroke":true,"color":[],"weight":2,"opacity":0.8,"fill":false,"fillColor":[],"fillOpacity":0.2,"smoothFactor":1,"noClip":false},[],null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addPolylines","args":[[[[{"lng":[-121.9756450186314,-121.9752880197166],"lat":[36.96018467386049,36.96048867389724]}]],[[{"lng":[-121.9765090160037,-121.9737900238879],"lat":[36.95943667377114,36.95827667391882]}]],[[{"lng":[-121.9743320227586,-121.9755650190142],"lat":[36.96254167404275,36.9615276739172]}]],[[{"lng":[-121.9747270214682,-121.9748660208474],"lat":[36.96138867397102,36.95946067388788]}]],[[{"lng":[-121.9739960233918,-121.9720870291102],"lat":[36.95928767394273,36.96013967411008]}]],[[{"lng":[-121.5402542439757,-121.5915640166306],"lat":[36.5901356970405,36.06207267202969]}]],[[{"lng":[-121.341095684225,-121.130219242125],"lat":[35.79265268834799,35.59959670672783]}]]],null,null,{"interactive":true,"className":"","stroke":true,"color":"#4D4D4D","weight":1.6,"opacity":0.42,"fill":false,"fillColor":"#4D4D4D","fillOpacity":0.2,"dashArray":"4,6","smoothFactor":1,"noClip":false},["<b>Between Episodes<\/b><br><b>Tag:<\/b> 38A3725B<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Moran Lake<br><b>From Episode:<\/b> 1<br><b>From Site:<\/b> Moran Lake, Moran Lake<br><b>From Type:<\/b> visit<br><b>End Time:<\/b> 2025-11-19 14:53:09<br><b>To Episode:<\/b> 2<br><b>To Site:<\/b> Moran Lake, Moran Lake<br><b>To Type:<\/b> visit<br><b>Next Start:<\/b> 2025-11-21 08:37:08","<b>Between Episodes<\/b><br><b>Tag:<\/b> 38A3725B<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Moran Lake<br><b>From Episode:<\/b> 2<br><b>From Site:<\/b> Moran Lake, Moran Lake<br><b>From Type:<\/b> visit<br><b>End Time:<\/b> 2025-11-21 09:29:08<br><b>To Episode:<\/b> 3<br><b>To Site:<\/b> outside<br><b>To Type:<\/b> foray<br><b>Next Start:<\/b> 2025-11-21 09:31:17","<b>Between Episodes<\/b><br><b>Tag:<\/b> 38A3725B<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Moran Lake<br><b>From Episode:<\/b> 3<br><b>From Site:<\/b> outside<br><b>From Type:<\/b> foray<br><b>End Time:<\/b> 2025-11-21 11:56:17<br><b>To Episode:<\/b> 4<br><b>To Site:<\/b> Moran Lake, Moran Lake<br><b>To Type:<\/b> visit<br><b>Next Start:<\/b> 2025-11-21 11:56:32","<b>Between Episodes<\/b><br><b>Tag:<\/b> 38A3725B<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Moran Lake<br><b>From Episode:<\/b> 4<br><b>From Site:<\/b> Moran Lake, Moran Lake<br><b>From Type:<\/b> visit<br><b>End Time:<\/b> 2025-11-21 16:08:19<br><b>To Episode:<\/b> 5<br><b>To Site:<\/b> Moran Lake, Moran Lake<br><b>To Type:<\/b> visit<br><b>Next Start:<\/b> 2025-11-22 09:17:22","<b>Between Episodes<\/b><br><b>Tag:<\/b> 38A3725B<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Moran Lake<br><b>From Episode:<\/b> 5<br><b>From Site:<\/b> Moran Lake, Moran Lake<br><b>From Type:<\/b> visit<br><b>End Time:<\/b> 2025-11-22 11:15:18<br><b>To Episode:<\/b> 6<br><b>To Site:<\/b> outside<br><b>To Type:<\/b> foray<br><b>Next Start:<\/b> 2025-11-22 11:24:54","<b>Between Episodes<\/b><br><b>Tag:<\/b> 38A3725B<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Moran Lake<br><b>From Episode:<\/b> 6<br><b>From Site:<\/b> outside<br><b>From Type:<\/b> foray<br><b>End Time:<\/b> 2025-11-22 15:10:19<br><b>To Episode:<\/b> 7<br><b>To Site:<\/b> outside<br><b>To Type:<\/b> foray<br><b>Next Start:<\/b> 2025-11-23 12:37:02","<b>Between Episodes<\/b><br><b>Tag:<\/b> 38A3725B<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Moran Lake<br><b>From Episode:<\/b> 7<br><b>From Site:<\/b> outside<br><b>From Type:<\/b> foray<br><b>End Time:<\/b> 2025-11-23 15:15:49<br><b>To Episode:<\/b> 8<br><b>To Site:<\/b> outside<br><b>To Type:<\/b> foray<br><b>Next Start:<\/b> 2025-11-24 09:50:06"],null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addCircleMarkers","args":[[36.96126967401606,36.96048867389724,36.95827667391882,36.9615276739172,36.95946067388788,36.96013967411008,36.06207267202969,35.59959670672783],[-121.9740250235238,-121.9752880197166,-121.9737900238879,-121.9755650190142,-121.9748660208474,-121.9720870291102,-121.5915640166306,-121.130219242125],3,null,null,{"interactive":true,"className":"","stroke":true,"color":"black","weight":1,"opacity":0.5,"fill":true,"fillColor":["#984EA3","#984EA3","#E41A1C","#984EA3","#984EA3","#E41A1C","#E41A1C","#E41A1C"],"fillOpacity":0.85},null,null,["<b>Start Point<\/b><br><b>Tag:<\/b> 38A3725B<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Moran Lake<br><b>Episode Site:<\/b> Moran Lake, Moran Lake<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> NA<br><b>Duration min:<\/b> 334.5<br><b>Detections:<\/b> 317<br><b>Start:<\/b> 2025-11-19 09:18:41","<b>Start Point<\/b><br><b>Tag:<\/b> 38A3725B<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Moran Lake<br><b>Episode Site:<\/b> Moran Lake, Moran Lake<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> NA<br><b>Duration min:<\/b> 52<br><b>Detections:<\/b> 12<br><b>Start:<\/b> 2025-11-21 08:37:08","<b>Start Point<\/b><br><b>Tag:<\/b> 38A3725B<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Moran Lake<br><b>Episode Site:<\/b> outside<br><b>Episode Type:<\/b> foray<br><b>Behavior:<\/b> NA<br><b>Duration min:<\/b> 145<br><b>Detections:<\/b> 229<br><b>Start:<\/b> 2025-11-21 09:31:17","<b>Start Point<\/b><br><b>Tag:<\/b> 38A3725B<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Moran Lake<br><b>Episode Site:<\/b> Moran Lake, Moran Lake<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> NA<br><b>Duration min:<\/b> 251.8<br><b>Detections:<\/b> 40<br><b>Start:<\/b> 2025-11-21 11:56:32","<b>Start Point<\/b><br><b>Tag:<\/b> 38A3725B<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Moran Lake<br><b>Episode Site:<\/b> Moran Lake, Moran Lake<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> NA<br><b>Duration min:<\/b> 117.9<br><b>Detections:<\/b> 42<br><b>Start:<\/b> 2025-11-22 09:17:22","<b>Start Point<\/b><br><b>Tag:<\/b> 38A3725B<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Moran Lake<br><b>Episode Site:<\/b> outside<br><b>Episode Type:<\/b> foray<br><b>Behavior:<\/b> NA<br><b>Duration min:<\/b> 225.4<br><b>Detections:<\/b> 300<br><b>Start:<\/b> 2025-11-22 11:24:54","<b>Start Point<\/b><br><b>Tag:<\/b> 38A3725B<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Moran Lake<br><b>Episode Site:<\/b> outside<br><b>Episode Type:<\/b> foray<br><b>Behavior:<\/b> NA<br><b>Duration min:<\/b> 158.8<br><b>Detections:<\/b> 19<br><b>Start:<\/b> 2025-11-23 12:37:02","<b>Start Point<\/b><br><b>Tag:<\/b> 38A3725B<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Moran Lake<br><b>Episode Site:<\/b> outside<br><b>Episode Type:<\/b> foray<br><b>Behavior:<\/b> NA<br><b>Duration min:<\/b> 19.5<br><b>Detections:<\/b> 4<br><b>Start:<\/b> 2025-11-24 09:50:06"],null,["START | 38A3725B | visit | detections: 317","START | 38A3725B | visit | detections: 12","START | 38A3725B | foray | detections: 229","START | 38A3725B | visit | detections: 40","START | 38A3725B | visit | detections: 42","START | 38A3725B | foray | detections: 300","START | 38A3725B | foray | detections: 19","START | 38A3725B | foray | detections: 4"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addCircleMarkers","args":[[36.96018467386049,36.95943667377114,36.96254167404275,36.96138867397102,36.95928767394273,36.5901356970405,35.79265268834799,35.58034270762602],[-121.9756450186314,-121.9765090160037,-121.9743320227586,-121.9747270214682,-121.9739960233918,-121.5402542439757,-121.341095684225,-121.1176852735126],4,null,null,{"interactive":true,"className":"","stroke":true,"color":"black","weight":1,"opacity":0.5,"fill":true,"fillColor":["#984EA3","#984EA3","#E41A1C","#984EA3","#984EA3","#E41A1C","#E41A1C","#E41A1C"],"fillOpacity":0.85},null,null,["<b>End Point<\/b><br><b>Tag:<\/b> 38A3725B<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Moran Lake<br><b>Episode Site:<\/b> Moran Lake, Moran Lake<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> NA<br><b>Duration min:<\/b> 334.5<br><b>Detections:<\/b> 317<br><b>End:<\/b> 2025-11-19 14:53:09","<b>End Point<\/b><br><b>Tag:<\/b> 38A3725B<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Moran Lake<br><b>Episode Site:<\/b> Moran Lake, Moran Lake<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> NA<br><b>Duration min:<\/b> 52<br><b>Detections:<\/b> 12<br><b>End:<\/b> 2025-11-21 09:29:08","<b>End Point<\/b><br><b>Tag:<\/b> 38A3725B<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Moran Lake<br><b>Episode Site:<\/b> outside<br><b>Episode Type:<\/b> foray<br><b>Behavior:<\/b> NA<br><b>Duration min:<\/b> 145<br><b>Detections:<\/b> 229<br><b>End:<\/b> 2025-11-21 11:56:17","<b>End Point<\/b><br><b>Tag:<\/b> 38A3725B<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Moran Lake<br><b>Episode Site:<\/b> Moran Lake, Moran Lake<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> NA<br><b>Duration min:<\/b> 251.8<br><b>Detections:<\/b> 40<br><b>End:<\/b> 2025-11-21 16:08:19","<b>End Point<\/b><br><b>Tag:<\/b> 38A3725B<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Moran Lake<br><b>Episode Site:<\/b> Moran Lake, Moran Lake<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> NA<br><b>Duration min:<\/b> 117.9<br><b>Detections:<\/b> 42<br><b>End:<\/b> 2025-11-22 11:15:18","<b>End Point<\/b><br><b>Tag:<\/b> 38A3725B<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Moran Lake<br><b>Episode Site:<\/b> outside<br><b>Episode Type:<\/b> foray<br><b>Behavior:<\/b> NA<br><b>Duration min:<\/b> 225.4<br><b>Detections:<\/b> 300<br><b>End:<\/b> 2025-11-22 15:10:19","<b>End Point<\/b><br><b>Tag:<\/b> 38A3725B<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Moran Lake<br><b>Episode Site:<\/b> outside<br><b>Episode Type:<\/b> foray<br><b>Behavior:<\/b> NA<br><b>Duration min:<\/b> 158.8<br><b>Detections:<\/b> 19<br><b>End:<\/b> 2025-11-23 15:15:49","<b>End Point<\/b><br><b>Tag:<\/b> 38A3725B<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Moran Lake<br><b>Episode Site:<\/b> outside<br><b>Episode Type:<\/b> foray<br><b>Behavior:<\/b> NA<br><b>Duration min:<\/b> 19.5<br><b>Detections:<\/b> 4<br><b>End:<\/b> 2025-11-24 10:09:38"],null,["END | 38A3725B | visit | detections: 317","END | 38A3725B | visit | detections: 12","END | 38A3725B | foray | detections: 229","END | 38A3725B | visit | detections: 40","END | 38A3725B | visit | detections: 42","END | 38A3725B | foray | detections: 300","END | 38A3725B | foray | detections: 19","END | 38A3725B | foray | detections: 4"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addCircleMarkers","args":[[36.96018467386049,36.95943667377114,36.96254167404275,36.96138867397102,36.95928767394273,36.5901356970405,35.79265268834799,35.58034270762602],[-121.9756450186314,-121.9765090160037,-121.9743320227586,-121.9747270214682,-121.9739960233918,-121.5402542439757,-121.341095684225,-121.1176852735126],1,null,null,{"interactive":true,"className":"","stroke":false,"color":"#03F","weight":5,"opacity":0.5,"fill":true,"fillColor":"black","fillOpacity":1},null,null,["<b>End Point<\/b><br><b>Tag:<\/b> 38A3725B<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Moran Lake<br><b>Episode Site:<\/b> Moran Lake, Moran Lake<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> NA<br><b>Duration min:<\/b> 334.5<br><b>Detections:<\/b> 317<br><b>End:<\/b> 2025-11-19 14:53:09","<b>End Point<\/b><br><b>Tag:<\/b> 38A3725B<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Moran Lake<br><b>Episode Site:<\/b> Moran Lake, Moran Lake<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> NA<br><b>Duration min:<\/b> 52<br><b>Detections:<\/b> 12<br><b>End:<\/b> 2025-11-21 09:29:08","<b>End Point<\/b><br><b>Tag:<\/b> 38A3725B<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Moran Lake<br><b>Episode Site:<\/b> outside<br><b>Episode Type:<\/b> foray<br><b>Behavior:<\/b> NA<br><b>Duration min:<\/b> 145<br><b>Detections:<\/b> 229<br><b>End:<\/b> 2025-11-21 11:56:17","<b>End Point<\/b><br><b>Tag:<\/b> 38A3725B<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Moran Lake<br><b>Episode Site:<\/b> Moran Lake, Moran Lake<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> NA<br><b>Duration min:<\/b> 251.8<br><b>Detections:<\/b> 40<br><b>End:<\/b> 2025-11-21 16:08:19","<b>End Point<\/b><br><b>Tag:<\/b> 38A3725B<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Moran Lake<br><b>Episode Site:<\/b> Moran Lake, Moran Lake<br><b>Episode Type:<\/b> visit<br><b>Behavior:<\/b> NA<br><b>Duration min:<\/b> 117.9<br><b>Detections:<\/b> 42<br><b>End:<\/b> 2025-11-22 11:15:18","<b>End Point<\/b><br><b>Tag:<\/b> 38A3725B<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Moran Lake<br><b>Episode Site:<\/b> outside<br><b>Episode Type:<\/b> foray<br><b>Behavior:<\/b> NA<br><b>Duration min:<\/b> 225.4<br><b>Detections:<\/b> 300<br><b>End:<\/b> 2025-11-22 15:10:19","<b>End Point<\/b><br><b>Tag:<\/b> 38A3725B<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Moran Lake<br><b>Episode Site:<\/b> outside<br><b>Episode Type:<\/b> foray<br><b>Behavior:<\/b> NA<br><b>Duration min:<\/b> 158.8<br><b>Detections:<\/b> 19<br><b>End:<\/b> 2025-11-23 15:15:49","<b>End Point<\/b><br><b>Tag:<\/b> 38A3725B<br><b>Sex:<\/b> M<br><b>Tag Site:<\/b> Moran Lake<br><b>Episode Site:<\/b> outside<br><b>Episode Type:<\/b> foray<br><b>Behavior:<\/b> NA<br><b>Duration min:<\/b> 19.5<br><b>Detections:<\/b> 4<br><b>End:<\/b> 2025-11-24 10:09:38"],null,["END | 38A3725B | visit | detections: 317","END | 38A3725B | visit | detections: 12","END | 38A3725B | foray | detections: 229","END | 38A3725B | visit | detections: 40","END | 38A3725B | visit | detections: 42","END | 38A3725B | foray | detections: 300","END | 38A3725B | foray | detections: 19","END | 38A3725B | foray | detections: 4"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLegend","args":[{"colors":[],"labels":[""],"na_color":null,"na_label":"NA","opacity":1,"position":"bottomright","type":"factor","title":"Behavior Type","extra":null,"layerId":null,"className":"info legend","group":null}]},{"method":"addLegend","args":[{"colors":["#984EA3","#BDBDBD"],"labels":["Active","Other"],"na_color":null,"na_label":"NA","opacity":1,"position":"topleft","type":"factor","title":"Site Status","extra":null,"layerId":null,"className":"info legend","group":null}]},{"method":"addControl","args":["<div style='background: white;padding: 8px 10px;border-radius: 4px;box-shadow: 0 1px 5px rgba(0,0,0,0.35);font-size: 14px;line-height: 18px;'><div style='font-weight: bold; margin-bottom: 4px;'>Episode Type<\/div><div><span style='display: inline-block;width: 10px;height: 10px;border-radius: 50%;background: #E41A1C;border: 1px solid black;margin-right: 6px;'><\/span>foray<\/div><div><span style='display: inline-block;width: 10px;height: 10px;border-radius: 50%;background: #984EA3;border: 1px solid black;margin-right: 6px;'><\/span>visit<\/div><\/div>","bottomleft",null,"info legend"]}],"limits":{"lat":[35.58034270762602,36.96254167404275],"lng":[-121.9773081735871,-121.1176852735126]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
