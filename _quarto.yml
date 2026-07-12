@@ -5,7 +5,7 @@ project:
 website:
   title: "Santa Cruz Monarch Movement Dashboard"
 
-navbar:
+  navbar:
     left:
       - href: index.qmd
         text: Home
@@ -21,7 +21,7 @@ navbar:
 
       - href: episodes_by_tag.qmd
         text: Episodes by Tag
-        
+
 render:
   - "*.qmd"
 
@@ -30,3 +30,4 @@ format:
     theme: cosmo
     css: styles.css
     toc: true
+    
