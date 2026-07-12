@@ -505,7 +505,7 @@ episode_lines_map <-
 
 ```
 
-Interactive map of detection episodes or consecutive detections inside or outside of a overwintering site boundary..
+Interactive map of detection episodes or consecutive detections inside or outside of a overwintering site boundary.
 ```{r}
 #| echo: false
 #| warning: false
