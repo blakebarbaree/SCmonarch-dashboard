@@ -1,5 +1,5 @@
 ---
-title: "Detection Explorer"
+title: "Detection Explorer - Single Tag"
 page-layout: full
 ---
 
@@ -19,6 +19,7 @@ boundary102 <- readRDS(
 detections <- readRDS(
   "data/detections.rds"
 )
+selected_tag <- "013EFFF1"
 
 # ------------------------------------------------------------
 # Prepare tabular detection data
@@ -62,6 +63,12 @@ detections_df$episode_type_map <-
     detections_df$episode_type
   )
 
+detections_df$behavior_type_map <-
+  ifelse(
+    is.na(detections_df$behavior_type),
+    "unclassified",
+    detections_df$behavior_type
+  )
 # Site label for popups
 
 detections_df$SiteName_popup <-
@@ -183,15 +190,22 @@ set.seed(1)
 
 max_points_per_group <- 500
 
+sampling_group <-
+  interaction(
+    detections_df$tag_id,
+    ifelse(
+      is.na(detections_df$behavior_type),
+      "missing_behavior",
+      detections_df$behavior_type
+    ),
+    drop = TRUE
+  )
+
 sample_ids <-
   unlist(
     tapply(
       seq_len(nrow(detections_df)),
-      interaction(
-        detections_df$tag_id,
-        detections_df$behavior_type,
-        drop = TRUE
-      ),
+      sampling_group,
       function(ii) {
         sample(
           ii,
@@ -208,6 +222,12 @@ detections_map_df <-
   detections_df[
     sample_ids,
   ]
+
+detections_map_df <-
+  detections_map_df |>
+  filter(
+    tag_id == selected_tag
+  )
 
 # ------------------------------------------------------------
 # Correct detection start geometry
@@ -445,7 +465,7 @@ detection_lines$popup_text <-
     detection_lines$tracking_period,
 
     "<br><b>Behavior:</b> ",
-    detection_lines$behavior_type,
+    detection_lines$behavior_type_map,
 
     "<br><b>Episode Type:</b> ",
     detection_lines$episode_type_map,
@@ -512,7 +532,7 @@ detection_starts$popup_text <-
     detection_starts$tracking_period,
 
     "<br><b>Behavior:</b> ",
-    detection_starts$behavior_type,
+    detection_starts$behavior_type_map,
 
     "<br><b>Episode Type:</b> ",
     detection_starts$episode_type_map,
@@ -544,7 +564,7 @@ detection_ends$popup_text <-
     detection_ends$tracking_period,
 
     "<br><b>Behavior:</b> ",
-    detection_ends$behavior_type,
+    detection_ends$behavior_type_map,
 
     "<br><b>Episode Type:</b> ",
     detection_ends$episode_type_map,
@@ -565,7 +585,7 @@ detection_starts$label_text <-
     " | ",
     detection_starts$episode_type_map,
     " | ",
-    detection_starts$behavior_type
+    detection_starts$behavior_type_map
   )
 
 detection_ends$label_text <-
@@ -574,7 +594,7 @@ detection_ends$label_text <-
     " | ",
     detection_ends$episode_type_map,
     " | ",
-    detection_ends$behavior_type
+    detection_ends$behavior_type_map
   )
 
 # ------------------------------------------------------------
@@ -590,8 +610,51 @@ detection_lines_map <-
 ```
 
 
+```{r}
+#| echo: false
+#| results: asis
 
-Interactive map of all detections.
+tag_ids <-
+  readRDS("data/detections.rds") |>
+  st_drop_geometry() |>
+  pull(tag_id) |>
+  unique() |>
+  sort()
+
+options_html <- paste(
+  sapply(
+    tag_ids,
+    function(x) {
+      selected <- if(x == selected_tag) "selected" else ""
+      paste0(
+        "<option value='detections_",
+        x,
+        ".html' ",
+        selected,
+        ">",
+        x,
+        "</option>"
+      )
+    }
+  ),
+  collapse = ""
+)
+
+cat(
+  paste0(
+    "<div style='margin-bottom:15px;'>",
+    "<label><b>Select Tag:</b></label><br>",
+    "<select onchange=\"window.location=this.value\">",
+    options_html,
+    "</select>",
+    "</div>"
+  )
+)
+```
+
+### Tag: `r selected_tag` 
+
+Interactive map of detections for the selected tag.
 
 ```{r}
 #| echo: false
