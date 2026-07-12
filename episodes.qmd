@@ -1,5 +1,6 @@
 ---
 title: "Episode Explorer"
+page-layout: full
 ---
 
 ```{r}
@@ -9,41 +10,515 @@ title: "Episode Explorer"
 
 library(sf)
 library(leaflet)
+library(dplyr)
 
 boundary102 <- readRDS(
   "data/boundary102.rds"
 )
 
-episode_lines <- readRDS(
-  "data/episode_lines.rds"
+episodes <- readRDS(
+  "data/episodes.rds"
 )
+
+# ------------------------------------------------------------
+# Keep only boundaries associated with episode sites
+# ------------------------------------------------------------
+
+episode_sites <-
+  unique(
+    na.omit(
+      episodes$state[
+        episodes$state != "outside"
+      ]
+    )
+  )
 
 boundary102 <-
   boundary102[
-    boundary102$SiteName %in%
-      unique(
-        na.omit(
-          c(
-            episode_lines$departed_site,
-            episode_lines$arrived_site
-          )
-        )
-      ),
+    boundary102$SiteName %in% episode_sites,
   ]
 
-behavior_pal <- c(
-  migration = "#E69F00",
-  premigration = "#0072B2",
-  winter = "#009E73"
-)
+boundary102$SiteStatus_map <-
+  ifelse(
+    !is.na(boundary102$SiteStatus) &
+      boundary102$SiteStatus == "Active",
+    "Active",
+    "Other"
+  )
+
+site_status_pal <-
+  colorFactor(
+    palette = c(
+      "#984EA3",
+      "#BDBDBD"
+    ),
+    domain = c(
+      "Active",
+      "Other"
+    )
+  )
+
+behavior_pal <-
+  colorFactor(
+    palette = c(
+      "#E69F00",
+      "#0072B2",
+      "#009E73"
+    ),
+    domain = c(
+      "migration",
+      "premigration",
+      "winter"
+    )
+  )
+
+episode_type_pal <-
+  colorFactor(
+    palette = c(
+      foray = "#E41A1C",
+      visit = "#984EA3"
+    ),
+    domain = c(
+      "foray",
+      "visit"
+    )
+  )
+
+# ------------------------------------------------------------
+# Boundary geometry
+# ------------------------------------------------------------
+# Apply the same small south adjustment used for detections.
+
+boundary102 <-
+  st_transform(
+    boundary102,
+    32610
+  )
+
+geom_boundary <-
+  st_geometry(boundary102) + c(0, -25)
+
+st_geometry(boundary102) <-
+  st_set_crs(
+    geom_boundary,
+    32610
+  )
+
+boundary102 <-
+  st_transform(
+    boundary102,
+    4326
+  )
+
+# ------------------------------------------------------------
+# Episode data
+# ------------------------------------------------------------
+
+episodes_df <-
+  if(inherits(episodes, "sf")) {
+    st_drop_geometry(episodes)
+  } else {
+    episodes
+  }
+
+episodes_df <-
+  episodes_df[
+    is.finite(episodes_df$start_x) &
+      is.finite(episodes_df$start_y) &
+      is.finite(episodes_df$end_x) &
+      is.finite(episodes_df$end_y),
+  ]
+
+episodes_df$row_id <-
+  seq_len(
+    nrow(episodes_df)
+  )
+
+# ------------------------------------------------------------
+# Correct episode start geometry
+# ------------------------------------------------------------
+# Rebuild starts from start_x / start_y as EPSG:32612,
+# transform to EPSG:32610,
+# apply same c(0, -25) adjustment,
+# then transform to WGS84 for Leaflet.
+
+episode_starts_32610 <-
+  st_as_sf(
+    episodes_df,
+    coords = c(
+      "start_x",
+      "start_y"
+    ),
+    crs = 32612,
+    remove = FALSE
+  ) |>
+  st_transform(
+    32610
+  )
+
+geom_start <-
+  st_geometry(episode_starts_32610) + c(0, -25)
+
+st_geometry(episode_starts_32610) <-
+  st_set_crs(
+    geom_start,
+    32610
+  )
+
+# ------------------------------------------------------------
+# Correct episode end geometry
+# ------------------------------------------------------------
+
+episode_ends_32610 <-
+  st_as_sf(
+    episodes_df,
+    coords = c(
+      "end_x",
+      "end_y"
+    ),
+    crs = 32612,
+    remove = FALSE
+  ) |>
+  st_transform(
+    32610
+  )
+
+geom_end <-
+  st_geometry(episode_ends_32610) + c(0, -25)
+
+st_geometry(episode_ends_32610) <-
+  st_set_crs(
+    geom_end,
+    32610
+  )
+
+# ------------------------------------------------------------
+# Extract corrected coordinates
+# ------------------------------------------------------------
+
+start_coords <-
+  st_coordinates(
+    episode_starts_32610
+  )
+
+end_coords <-
+  st_coordinates(
+    episode_ends_32610
+  )
+
+# ------------------------------------------------------------
+# Build dashed transition lines between consecutive episodes
+# ------------------------------------------------------------
+# These connect the end of one episode to the start of the next
+# episode for the same tag_id, regardless of date.
+
+episode_coords <-
+  episodes_df |>
+  mutate(
+    start_X = start_coords[, "X"],
+    start_Y = start_coords[, "Y"],
+    end_X = end_coords[, "X"],
+    end_Y = end_coords[, "Y"]
+  )
+
+transition_df <-
+  episode_coords |>
+  arrange(
+    tag_id,
+    start_time
+  ) |>
+  group_by(
+    tag_id
+  ) |>
+  mutate(
+    next_start_X = lead(start_X),
+    next_start_Y = lead(start_Y),
+    next_state = lead(state),
+    next_episode_type = lead(episode_type),
+    next_start_time = lead(start_time),
+    next_merged_episode_id = lead(merged_episode_id)
+  ) |>
+  ungroup() |>
+  filter(
+    is.finite(end_X),
+    is.finite(end_Y),
+    is.finite(next_start_X),
+    is.finite(next_start_Y)
+  )
+
+transition_line_geom <-
+  st_sfc(
+    lapply(
+      seq_len(nrow(transition_df)),
+      function(i) {
+        st_linestring(
+          matrix(
+            c(
+              transition_df$end_X[i],
+              transition_df$end_Y[i],
+              transition_df$next_start_X[i],
+              transition_df$next_start_Y[i]
+            ),
+            ncol = 2,
+            byrow = TRUE
+          )
+        )
+      }
+    ),
+    crs = 32610
+  )
+
+transition_lines <-
+  st_sf(
+    transition_df,
+    geometry = transition_line_geom
+  ) |>
+  st_transform(
+    4326
+  )
+
+transition_lines$popup_text <-
+  paste0(
+    "<b>Between Episodes</b>",
+    "<br><b>Tag:</b> ",
+    transition_lines$tag_id,
+
+    "<br><b>Sex:</b> ",
+    transition_lines$Sex,
+
+    "<br><b>Tag Site:</b> ",
+    transition_lines$TagSiteName,
+
+    "<br><b>From Episode:</b> ",
+    transition_lines$merged_episode_id,
+
+    "<br><b>From Site:</b> ",
+    transition_lines$state,
+
+    "<br><b>From Type:</b> ",
+    transition_lines$episode_type,
+
+    "<br><b>End Time:</b> ",
+    transition_lines$end_time,
+
+    "<br><b>To Episode:</b> ",
+    transition_lines$next_merged_episode_id,
+
+    "<br><b>To Site:</b> ",
+    transition_lines$next_state,
+
+    "<br><b>To Type:</b> ",
+    transition_lines$next_episode_type,
+
+    "<br><b>Next Start:</b> ",
+    transition_lines$next_start_time
+  )
+
+# ------------------------------------------------------------
+# Build corrected within-episode lines
+# ------------------------------------------------------------
+
+episode_line_geom <-
+  st_sfc(
+    lapply(
+      seq_len(nrow(episodes_df)),
+      function(i) {
+        st_linestring(
+          matrix(
+            c(
+              start_coords[i, "X"],
+              start_coords[i, "Y"],
+              end_coords[i, "X"],
+              end_coords[i, "Y"]
+            ),
+            ncol = 2,
+            byrow = TRUE
+          )
+        )
+      }
+    ),
+    crs = 32610
+  )
+
+episode_lines <-
+  st_sf(
+    episodes_df,
+    geometry = episode_line_geom
+  ) |>
+  st_transform(
+    4326
+  )
+
+episode_starts <-
+  episode_starts_32610 |>
+  st_transform(
+    4326
+  )
+
+episode_ends <-
+  episode_ends_32610 |>
+  st_transform(
+    4326
+  )
+
+# ------------------------------------------------------------
+# Popup text
+# ------------------------------------------------------------
+
+episode_lines$popup_text <-
+  paste0(
+    "<b>Tag:</b> ",
+    episode_lines$tag_id,
+
+    "<br><b>Sex:</b> ",
+    episode_lines$Sex,
+
+    "<br><b>Tag Site:</b> ",
+    episode_lines$TagSiteName,
+
+    "<br><b>Episode Site:</b> ",
+    episode_lines$state,
+
+    "<br><b>Episode Type:</b> ",
+    episode_lines$episode_type,
+
+    "<br><b>Behavior:</b> ",
+    episode_lines$behavior_type,
+
+    "<br><b>Duration min:</b> ",
+    round(
+      episode_lines$duration_min,
+      1
+    ),
+
+    "<br><b>Detections:</b> ",
+    episode_lines$n_detections,
+
+    "<br><b>Start:</b> ",
+    episode_lines$start_time,
+
+    "<br><b>End:</b> ",
+    episode_lines$end_time
+  )
+
+episode_starts$popup_text <-
+  paste0(
+    "<b>Start Point</b>",
+    "<br><b>Tag:</b> ",
+    episode_starts$tag_id,
+
+    "<br><b>Sex:</b> ",
+    episode_starts$Sex,
+
+    "<br><b>Tag Site:</b> ",
+    episode_starts$TagSiteName,
+
+    "<br><b>Episode Site:</b> ",
+    episode_starts$state,
+
+    "<br><b>Episode Type:</b> ",
+    episode_starts$episode_type,
+
+    "<br><b>Behavior:</b> ",
+    episode_starts$behavior_type,
+
+    "<br><b>Duration min:</b> ",
+    round(
+      episode_starts$duration_min,
+      1
+    ),
+
+    "<br><b>Detections:</b> ",
+    episode_starts$n_detections,
+
+    "<br><b>Start:</b> ",
+    episode_starts$start_time
+  )
+
+episode_ends$popup_text <-
+  paste0(
+    "<b>End Point</b>",
+    "<br><b>Tag:</b> ",
+    episode_ends$tag_id,
+
+    "<br><b>Sex:</b> ",
+    episode_ends$Sex,
+
+    "<br><b>Tag Site:</b> ",
+    episode_ends$TagSiteName,
+
+    "<br><b>Episode Site:</b> ",
+    episode_ends$state,
+
+    "<br><b>Episode Type:</b> ",
+    episode_ends$episode_type,
+
+    "<br><b>Behavior:</b> ",
+    episode_ends$behavior_type,
+
+    "<br><b>Duration min:</b> ",
+    round(
+      episode_ends$duration_min,
+      1
+    ),
+
+    "<br><b>Detections:</b> ",
+    episode_ends$n_detections,
+
+    "<br><b>End:</b> ",
+    episode_ends$end_time
+  )
+
+# ------------------------------------------------------------
+# Hover labels
+# ------------------------------------------------------------
+episode_starts$label_text <-
+  paste0(
+    "START | ",
+    episode_starts$tag_id,
+    " | ",
+    episode_starts$episode_type,
+    " | detections: ",
+    episode_starts$n_detections
+  )
+
+episode_ends$label_text <-
+  paste0(
+    "END | ",
+    episode_ends$tag_id,
+    " | ",
+    episode_ends$episode_type,
+    " | detections: ",
+    episode_ends$n_detections
+  )
+
+# ------------------------------------------------------------
+# Map-ready episode lines
+# ------------------------------------------------------------
+# Exclude episodes without behavior type so they do not appear
+# as an NA category in the line layer or legend.
+
+episode_lines_map <-
+  episode_lines[
+    !is.na(episode_lines$behavior_type),
+  ]
+
 ```
 
-Interactive map of movement episodes.
-
+Interactive map of detection episodes or consecutive detections inside or outside of a overwintering site boundary..
 ```{r}
 #| echo: false
+#| warning: false
+#| message: false
 
-leaflet() |>
+m <- leaflet(
+  width = "100%",
+  height = "600px",
+  options =
+    leafletOptions(
+      preferCanvas = TRUE
+    )
+) |>
 
   addProviderTiles(
     providers$Esri.WorldTopoMap
@@ -51,55 +526,162 @@ leaflet() |>
 
   addPolygons(
     data = boundary102,
-
     fillColor =
-      ~ifelse(
-        SiteStatus == "Active",
-        "#1B9E77",
-        "#BDBDBD"
+      ~site_status_pal(
+        SiteStatus_map
       ),
-
-    fillOpacity = 0.3,
-
-    color = "black",
-
-    weight = 1
+    fillOpacity = 0.35,
+    color =
+      ~site_status_pal(
+        SiteStatus_map
+      ),
+    weight = 2,
+    opacity = 0.9,
+    popup =
+      ~paste0(
+        "<b>Site:</b> ",
+        SiteName,
+        "<br><b>Status:</b> ",
+        SiteStatus_map
+      )
   ) |>
 
   addPolylines(
-    data = episode_lines,
-
+    data = episode_lines_map,
     color =
-      ~behavior_pal[
+      ~behavior_pal(
         behavior_type
-      ],
-
+      ),
     weight = 2,
-
     opacity = 0.8,
-
     popup =
-      ~paste0(
-        "<b>Tag:</b> ",
-        tag_id,
+      ~popup_text
+  ) |>
 
-        "<br><b>Tracking:</b> ",
-        tracking_period,
+  addPolylines(
+    data = transition_lines,
+    color = "#4D4D4D",
+    weight = 1.6,
+    opacity = 0.42,
+    dashArray = "4,6",
+    popup =
+      ~popup_text
+  ) |>
 
-        "<br><b>Behavior:</b> ",
-        behavior_type,
+  # Start points: solid circles
+  addCircleMarkers(
+    data = episode_starts,
+    radius = 3,
+    stroke = TRUE,
+    weight = 1,
+    color = "black",
+    fillColor =
+      ~episode_type_pal(
+        episode_type
+      ),
+    fillOpacity = 0.85,
+    popup =
+      ~popup_text,
+    label =
+      ~label_text
+  ) |>
 
-        "<br><b>Episode Type:</b> ",
-        episode_type,
+  # End points: outer colored circles
+  addCircleMarkers(
+    data = episode_ends,
+    radius = 4,
+    stroke = TRUE,
+    weight = 1,
+    color = "black",
+    fillColor =
+      ~episode_type_pal(
+        episode_type
+      ),
+    fillOpacity = 0.85,
+    popup =
+      ~popup_text,
+    label =
+      ~label_text
+  ) |>
 
-        "<br><b>Duration (min):</b> ",
-        round(duration_min),
+  # End points: small black inset dot
+  addCircleMarkers(
+    data = episode_ends,
+    radius = 1,
+    stroke = FALSE,
+    fillColor = "black",
+    fillOpacity = 1,
+    popup =
+      ~popup_text,
+    label =
+      ~label_text
+  ) |>
 
-        "<br><b>Departed:</b> ",
-        departed_site,
+  addLegend(
+    position = "bottomright",
+    pal = behavior_pal,
+    values = episode_lines_map$behavior_type,
+    title = "Behavior Type",
+    opacity = 1
+  ) |>
 
-        "<br><b>Arrived:</b> ",
-        arrived_site
-      )
+  addLegend(
+    position = "topleft",
+    pal = site_status_pal,
+    values = c(
+      "Active",
+      "Other"
+    ),
+    title = "Site Status",
+    opacity = 1
+  ) |>
+
+  addControl(
+    html =
+      htmltools::HTML(
+        paste0(
+          "<div style='",
+          "background: white;",
+          "padding: 8px 10px;",
+          "border-radius: 4px;",
+          "box-shadow: 0 1px 5px rgba(0,0,0,0.35);",
+          "font-size: 14px;",
+          "line-height: 18px;",
+          "'>",
+          "<div style='font-weight: bold; margin-bottom: 4px;'>Episode Type</div>",
+
+          "<div>",
+          "<span style='",
+          "display: inline-block;",
+          "width: 10px;",
+          "height: 10px;",
+          "border-radius: 50%;",
+          "background: #E41A1C;",
+          "border: 1px solid black;",
+          "margin-right: 6px;",
+          "'></span>",
+          "foray",
+          "</div>",
+
+          "<div>",
+          "<span style='",
+          "display: inline-block;",
+          "width: 10px;",
+          "height: 10px;",
+          "border-radius: 50%;",
+          "background: #984EA3;",
+          "border: 1px solid black;",
+          "margin-right: 6px;",
+          "'></span>",
+          "visit",
+          "</div>",
+
+          "</div>"
+        )
+      ),
+    position = "bottomleft"
   )
+
+m
+
 ```
