@@ -120,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -128,20 +128,23 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#study-summary" id="toc-study-summary" class="nav-link active" data-scroll-target="#study-summary">Study Summary</a></li>
-  <li><a href="#available-explorers" id="toc-available-explorers" class="nav-link" data-scroll-target="#available-explorers">Available Explorers</a>
+  <li><a href="#how-to-use-this-dashboard" id="toc-how-to-use-this-dashboard" class="nav-link active" data-scroll-target="#how-to-use-this-dashboard">How to Use This Dashboard</a>
   <ul class="collapse">
   <li><a href="#detection-explorer" id="toc-detection-explorer" class="nav-link" data-scroll-target="#detection-explorer">Detection Explorer</a></li>
+  <li><a href="#detections-by-tag" id="toc-detections-by-tag" class="nav-link" data-scroll-target="#detections-by-tag">Detections by Tag</a></li>
   <li><a href="#episode-explorer" id="toc-episode-explorer" class="nav-link" data-scroll-target="#episode-explorer">Episode Explorer</a></li>
+  <li><a href="#episodes-by-tag" id="toc-episodes-by-tag" class="nav-link" data-scroll-target="#episodes-by-tag">Episodes by Tag</a></li>
   </ul></li>
-  <li><a href="#example-tag-summaries" id="toc-example-tag-summaries" class="nav-link" data-scroll-target="#example-tag-summaries">Example Tag Summaries</a></li>
-  <li><a href="#data-included" id="toc-data-included" class="nav-link" data-scroll-target="#data-included">Data Included</a></li>
+  <li><a href="#study-summary" id="toc-study-summary" class="nav-link" data-scroll-target="#study-summary">Study Summary</a></li>
   <li><a href="#study-period" id="toc-study-period" class="nav-link" data-scroll-target="#study-period">Study Period</a></li>
+  <li><a href="#data-included" id="toc-data-included" class="nav-link" data-scroll-target="#data-included">Data Included</a></li>
+  <li><a href="#data-included-1" id="toc-data-included-1" class="nav-link" data-scroll-target="#data-included-1">Data Included</a></li>
+  <li><a href="#example-tag-summaries" id="toc-example-tag-summaries" class="nav-link" data-scroll-target="#example-tag-summaries">Example Tag Summaries</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -150,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -162,77 +165,74 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Interactive exploration of monarch movement patterns, detection histories, and movement episodes from the Santa Cruz Monarch Telemetry Study.</p>
-<section id="study-summary" class="level2">
-<h2 class="anchored" data-anchor-id="study-summary">Study Summary</h2>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>   n_tags n_episodes n_visits n_forays total_points first_detection
-    &lt;int&gt;      &lt;int&gt;    &lt;int&gt;    &lt;int&gt;        &lt;int&gt;          &lt;Date&gt;
-1:     41       3452     2164     1288       427901      2025-11-18
-   last_detection
-           &lt;Date&gt;
-1:     2026-04-29</code></pre>
-</div>
-</div>
-</section>
-<section id="available-explorers" class="level2">
-<h2 class="anchored" data-anchor-id="available-explorers">Available Explorers</h2>
+<p>This dashboard provides an interactive summary of Blu+ telemetry detections, movement episodes, and overwintering site use for western monarchs radio tagged in Santa Cruz, California, USA.</p>
+<p>The dashboard is designed to help visualize detection histories, movement paths, site use, visit and foray episodes, and broad behavioral classifications through time and space.</p>
+<section id="how-to-use-this-dashboard" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-use-this-dashboard">How to Use This Dashboard</h2>
+<p>Use the navigation bar at the top of the page to move between the dashboard views:</p>
+<ul>
+<li>all detections,</li>
+<li>detections by individual tag,</li>
+<li>all movement episodes,</li>
+<li>episodes by individual tag.</li>
+</ul>
 <section id="detection-explorer" class="level3">
 <h3 class="anchored" data-anchor-id="detection-explorer">Detection Explorer</h3>
-<p>Explore individual monarch detections through time and space.</p>
-<p>Features:</p>
+<p>The detection explorer shows detection-level movement records. It includes:</p>
 <ul>
-<li>Interactive map</li>
-<li>Site boundaries</li>
-<li>Behavioral states</li>
-<li>Individual tag histories</li>
-<li>Detection-level records</li>
+<li>site boundary polygons,</li>
+<li>detection points,</li>
+<li>detection-step lines,</li>
+<li>behavior classifications,</li>
+<li>episode-type point symbols,</li>
+<li>dashed transition lines between new episodes or dates.</li>
 </ul>
+</section>
+<section id="detections-by-tag" class="level3">
+<h3 class="anchored" data-anchor-id="detections-by-tag">Detections by Tag</h3>
+<p>The tag-specific detection pages show detection records for one monarch tag at a time. These pages are useful for reviewing the movement history of individual tagged monarchs.</p>
 </section>
 <section id="episode-explorer" class="level3">
 <h3 class="anchored" data-anchor-id="episode-explorer">Episode Explorer</h3>
-<p>Explore movement episodes among sites.</p>
-<p>Features:</p>
-<ul>
-<li>Movement trajectories</li>
-<li>Episode start and end locations</li>
-<li>Behavioral classifications</li>
-<li>Visit and foray episodes</li>
-<li>Site transitions</li>
-</ul>
+<p>The episode explorer summarizes movement episodes, including visits, forays, episode start and end points, and transitions among sites.</p>
+</section>
+<section id="episodes-by-tag" class="level3">
+<h3 class="anchored" data-anchor-id="episodes-by-tag">Episodes by Tag</h3>
+<p>The tag-specific episode pages show episode histories for individual monarchs. These pages are useful for reviewing site use, visit behavior, forays, and movement sequences by individual tag.</p>
 </section>
 </section>
-<section id="example-tag-summaries" class="level2">
-<h2 class="anchored" data-anchor-id="example-tag-summaries">Example Tag Summaries</h2>
+<section id="study-summary" class="level2">
+<h2 class="anchored" data-anchor-id="study-summary">Study Summary</h2>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>      tag_id            tracking_period n_detections n_episodes n_visits
-      &lt;char&gt;                     &lt;char&gt;        &lt;int&gt;      &lt;int&gt;    &lt;int&gt;
- 1: A496835F 21-Nov-2025 to 03-Apr-2026        53243        229       91
- 2: C1AEFFB4 21-Nov-2025 to 22-Apr-2026        37184        175       85
- 3: 8100F39A 18-Nov-2025 to 17-Mar-2026        24036        127       73
- 4: DD65DD49 19-Nov-2025 to 10-Feb-2026        20767        100       40
- 5: 3B660685 21-Nov-2025 to 13-Feb-2026        18196        125       74
- 6: 91E9B5F8 21-Nov-2025 to 08-Mar-2026        17971        198      114
- 7: BA74FD2A 19-Nov-2025 to 07-Apr-2026        15668        197      109
- 8: 36F944CB 19-Nov-2025 to 12-Feb-2026        13585         79       45
- 9: E486B67D 21-Nov-2025 to 06-Mar-2026        13472        123       88
-10: 2B58DD6C 19-Nov-2025 to 05-Feb-2026        12712        109       73
-    n_forays                  primary_site
-       &lt;int&gt;                        &lt;char&gt;
- 1:      138                          &lt;NA&gt;
- 2:       90                          &lt;NA&gt;
- 3:       54 Lighthouse  Field, Santa Cruz
- 4:       60                          &lt;NA&gt;
- 5:       51        Moran Lake, Moran Lake
- 6:       84                          &lt;NA&gt;
- 7:       88                          &lt;NA&gt;
- 8:       34                          &lt;NA&gt;
- 9:       35        Moran Lake, Moran Lake
-10:       36        Moran Lake, Moran Lake</code></pre>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Metric</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Telemetry detections</td>
+<td style="text-align: right;">427,901</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Movement episodes</td>
+<td style="text-align: right;">3,452</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Tracked monarchs</td>
+<td style="text-align: right;">41</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
+</section>
+<section id="study-period" class="level2">
+<h2 class="anchored" data-anchor-id="study-period">Study Period</h2>
+<p><strong>18-Nov-2025 to 29-Apr-2026</strong></p>
 </section>
 <section id="data-included" class="level2">
 <h2 class="anchored" data-anchor-id="data-included">Data Included</h2>
@@ -241,18 +241,191 @@ ul.task-list li input[type="checkbox"] {
 <li>427,901 telemetry detections</li>
 <li>3,452 movement episodes</li>
 <li>41 individually tracked monarchs</li>
-<li>Site boundary polygons</li>
-<li>Behavior classifications:
+<li>overwintering site boundary polygons</li>
+<li>detection-level movement records</li>
+<li>visit and foray episode summaries</li>
+<li>behavior classifications:
 <ul>
-<li>Migration</li>
-<li>Premigration</li>
-<li>Winter</li>
+<li>migration</li>
+<li>premigration</li>
+<li>winter</li>
 </ul></li>
 </ul>
 </section>
-<section id="study-period" class="level2">
-<h2 class="anchored" data-anchor-id="study-period">Study Period</h2>
-<p><strong>18-Nov-2025 to 29-Apr-2026</strong></p>
+<section id="data-included-1" class="level2">
+<h2 class="anchored" data-anchor-id="data-included-1">Data Included</h2>
+<p>The dashboard currently includes:</p>
+<ul>
+<li>427,901 telemetry detections</li>
+<li>3,452 movement episodes</li>
+<li>41 individually tracked monarchs</li>
+<li>overwintering site boundary polygons</li>
+<li>detection-level movement records</li>
+<li>visit and foray episode summaries</li>
+<li>behavior classifications:
+<ul>
+<li>migration</li>
+<li>premigration</li>
+<li>winter</li>
+</ul></li>
+</ul>
+</section>
+<section id="example-tag-summaries" class="level2">
+<h2 class="anchored" data-anchor-id="example-tag-summaries">Example Tag Summaries</h2>
+<p>The table below shows the ten tags with the greatest number of detections.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Tag ID</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Tracking Period</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Sex</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Tagging Site</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Detections</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Episodes</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Visits</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Forays</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Mass (g)</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Wing Condition</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">OE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A496835F</td>
+<td style="text-align: left;">21-Nov-2025 to 03-Apr-2026</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: left;">Lighthouse Field</td>
+<td style="text-align: right;">53243</td>
+<td style="text-align: right;">229</td>
+<td style="text-align: right;">91</td>
+<td style="text-align: right;">138</td>
+<td style="text-align: left;">0.76</td>
+<td style="text-align: left;">1.0</td>
+<td style="text-align: left;">2.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">C1AEFFB4</td>
+<td style="text-align: left;">21-Nov-2025 to 22-Apr-2026</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: left;">Lighthouse Field</td>
+<td style="text-align: right;">37184</td>
+<td style="text-align: right;">175</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: left;">0.58</td>
+<td style="text-align: left;">2.0</td>
+<td style="text-align: left;">0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">8100F39A</td>
+<td style="text-align: left;">18-Nov-2025 to 17-Mar-2026</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: left;">Lighthouse Field</td>
+<td style="text-align: right;">24036</td>
+<td style="text-align: right;">127</td>
+<td style="text-align: right;">73</td>
+<td style="text-align: right;">54</td>
+<td style="text-align: left;">0.66</td>
+<td style="text-align: left;">2.0</td>
+<td style="text-align: left;">3.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">DD65DD49</td>
+<td style="text-align: left;">19-Nov-2025 to 10-Feb-2026</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: left;">Moran Lake</td>
+<td style="text-align: right;">20767</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: left;">0.52</td>
+<td style="text-align: left;">2.0</td>
+<td style="text-align: left;">2.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3B660685</td>
+<td style="text-align: left;">21-Nov-2025 to 13-Feb-2026</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: left;">Moran Lake</td>
+<td style="text-align: right;">18196</td>
+<td style="text-align: right;">125</td>
+<td style="text-align: right;">74</td>
+<td style="text-align: right;">51</td>
+<td style="text-align: left;">0.6</td>
+<td style="text-align: left;">2.0</td>
+<td style="text-align: left;">2.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">91E9B5F8</td>
+<td style="text-align: left;">21-Nov-2025 to 08-Mar-2026</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: left;">Moran Lake</td>
+<td style="text-align: right;">17971</td>
+<td style="text-align: right;">198</td>
+<td style="text-align: right;">114</td>
+<td style="text-align: right;">84</td>
+<td style="text-align: left;">0.7</td>
+<td style="text-align: left;">2.0</td>
+<td style="text-align: left;">2.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BA74FD2A</td>
+<td style="text-align: left;">19-Nov-2025 to 07-Apr-2026</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">Moran Lake</td>
+<td style="text-align: right;">15668</td>
+<td style="text-align: right;">197</td>
+<td style="text-align: right;">109</td>
+<td style="text-align: right;">88</td>
+<td style="text-align: left;">0.58</td>
+<td style="text-align: left;">2.0</td>
+<td style="text-align: left;">2.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">36F944CB</td>
+<td style="text-align: left;">19-Nov-2025 to 12-Feb-2026</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: left;">Moran Lake</td>
+<td style="text-align: right;">13585</td>
+<td style="text-align: right;">79</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: left;">0.62</td>
+<td style="text-align: left;">2.0</td>
+<td style="text-align: left;">4.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">E486B67D</td>
+<td style="text-align: left;">21-Nov-2025 to 06-Mar-2026</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">Moran Lake</td>
+<td style="text-align: right;">13472</td>
+<td style="text-align: right;">123</td>
+<td style="text-align: right;">88</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: left;">0.62</td>
+<td style="text-align: left;">2.0</td>
+<td style="text-align: left;">0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2B58DD6C</td>
+<td style="text-align: left;">19-Nov-2025 to 05-Feb-2026</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">Moran Lake</td>
+<td style="text-align: right;">12712</td>
+<td style="text-align: right;">109</td>
+<td style="text-align: right;">73</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: left;">0.6</td>
+<td style="text-align: left;">2.0</td>
+<td style="text-align: left;">2.0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 
 
 </section>

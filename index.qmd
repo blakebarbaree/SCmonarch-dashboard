@@ -1,5 +1,6 @@
 ---
 title: "Santa Cruz Monarch Movement Dashboard"
+page-layout: full
 ---
 
 ```{r}
@@ -8,6 +9,7 @@ title: "Santa Cruz Monarch Movement Dashboard"
 #| message: false
 
 library(data.table)
+library(knitr)
 
 dashboard_summary <- readRDS(
   "data/dashboard_summary.rds"
@@ -16,79 +18,84 @@ dashboard_summary <- readRDS(
 tag_summary <- readRDS(
   "data/tag_summary.rds"
 )
+
+tag_meta <- readRDS(
+  "data/tag_meta.rds"
+)
 ```
 
-Interactive exploration of monarch movement patterns, detection histories, and movement episodes from the Santa Cruz Monarch Telemetry Study.
+This dashboard provides an interactive summary of Blu+ telemetry detections, movement episodes, and overwintering site use for western monarchs radio tagged in Santa Cruz, California, USA.
+
+The dashboard is designed to help visualize detection histories, movement paths, site use, visit and foray episodes, and broad behavioral classifications through time and space.
+
+## How to Use This Dashboard
+
+Use the navigation bar at the top of the page to move between the dashboard views:
+
+- all detections,
+- detections by individual tag,
+- all movement episodes,
+- episodes by individual tag.
+
+### Detection Explorer
+
+The detection explorer shows detection-level movement records. It includes:
+
+- site boundary polygons,
+- detection points,
+- detection-step lines,
+- behavior classifications,
+- episode-type point symbols,
+- dashed transition lines between new episodes or dates.
+
+### Detections by Tag
+
+The tag-specific detection pages show detection records for one monarch tag at a time. These pages are useful for reviewing the movement history of individual tagged monarchs.
+
+### Episode Explorer
+
+The episode explorer summarizes movement episodes, including visits, forays, episode start and end points, and transitions among sites.
+
+### Episodes by Tag
+
+The tag-specific episode pages show episode histories for individual monarchs. These pages are useful for reviewing site use, visit behavior, forays, and movement sequences by individual tag.
 
 ## Study Summary
 
 ```{r}
 #| echo: false
 
-dashboard_summary
-```
-
-## Available Explorers
-
-### Detection Explorer
-
-Explore individual monarch detections through time and space.
-
-Features:
-
-- Interactive map
-- Site boundaries
-- Behavioral states
-- Individual tag histories
-- Detection-level records
-
-### Episode Explorer
-
-Explore movement episodes among sites.
-
-Features:
-
-- Movement trajectories
-- Episode start and end locations
-- Behavioral classifications
-- Visit and foray episodes
-- Site transitions
-
-## Example Tag Summaries
-
-```{r}
-#| echo: false
-
-tag_summary[
-  ,
-  .(
-    tag_id,
-    tracking_period,
-    n_detections,
-    n_episodes,
-    n_visits,
-    n_forays,
-    primary_site
+summary_table <- data.table(
+  Metric = c(
+    "Telemetry detections",
+    "Movement episodes",
+    "Tracked monarchs"
+  ),
+  Value = c(
+    format(
+      dashboard_summary$total_points,
+      big.mark = ","
+    ),
+    format(
+      dashboard_summary$n_episodes,
+      big.mark = ","
+    ),
+    format(
+      dashboard_summary$n_tags,
+      big.mark = ","
+    )
   )
-][
-  order(-n_detections)
-][
-  1:min(10, .N)
-]
+)
+
+kable(
+  summary_table,
+  format = "html",
+  align = c(
+    "l",
+    "r"
+  )
+)
 ```
-
-## Data Included
-
-The dashboard currently includes:
-
-- `r format(dashboard_summary$total_points, big.mark = ",")` telemetry detections
-- `r format(dashboard_summary$n_episodes, big.mark = ",")` movement episodes
-- `r format(dashboard_summary$n_tags, big.mark = ",")` individually tracked monarchs
-- Site boundary polygons
-- Behavior classifications:
-  - Migration
-  - Premigration
-  - Winter
 
 ## Study Period
 
@@ -110,5 +117,137 @@ cat(
     ),
     "**"
   )
+)
+```
+
+## Data Included
+
+The dashboard currently includes:
+
+- `r format(dashboard_summary$total_points, big.mark = ",")` telemetry detections
+- `r format(dashboard_summary$n_episodes, big.mark = ",")` movement episodes
+- `r format(dashboard_summary$n_tags, big.mark = ",")` individually tracked monarchs
+- overwintering site boundary polygons
+- detection-level movement records
+- visit and foray episode summaries
+- behavior classifications:
+  - migration
+  - premigration
+  - winter
+  
+## Data Included
+
+The dashboard currently includes:
+
+- `r format(dashboard_summary$total_points, big.mark = ",")` telemetry detections
+- `r format(dashboard_summary$n_episodes, big.mark = ",")` movement episodes
+- `r format(dashboard_summary$n_tags, big.mark = ",")` individually tracked monarchs
+- overwintering site boundary polygons
+- detection-level movement records
+- visit and foray episode summaries
+- behavior classifications:
+  - migration
+  - premigration
+  - winter
+
+## Example Tag Summaries
+
+The table below shows the ten tags with the greatest number of detections.
+
+```{r}
+#| echo: false
+
+tag_meta_dt <-
+  as.data.table(
+    tag_meta
+  )
+
+tag_summary_dt <-
+  as.data.table(
+    tag_summary
+  )
+
+example_tags <-
+  tag_summary_dt[
+    ,
+    .(
+      tag_id,
+      tracking_period,
+      n_detections,
+      n_episodes,
+      n_visits,
+      n_forays
+    )
+  ][
+    tag_meta_dt[
+      ,
+      .(
+        tag_id,
+        Tagging_Date,
+        Individual_ID,
+        Sex,
+        Wing_Cond,
+        Mass_g,
+        Tagging_Site,
+        OE
+      )
+    ],
+    on = "tag_id"
+  ][
+    order(-n_detections)
+  ][
+    1:min(10, .N)
+  ]
+
+setnames(
+  example_tags,
+  old = c(
+    "tag_id",
+    "tracking_period",
+    "n_detections",
+    "n_episodes",
+    "n_visits",
+    "n_forays",
+    "Tagging_Site",
+    "Sex",
+    "Mass_g",
+    "Wing_Cond",
+    "OE"
+  ),
+  new = c(
+    "Tag ID",
+    "Tracking Period",
+    "Detections",
+    "Episodes",
+    "Visits",
+    "Forays",
+    "Tagging Site",
+    "Sex",
+    "Mass (g)",
+    "Wing Condition",
+    "OE"
+  ),
+  skip_absent = TRUE
+)
+
+kable(
+  example_tags[
+    ,
+    .(
+      `Tag ID`,
+      `Tracking Period`,
+      Sex,
+      `Tagging Site`,
+      `Detections`,
+      `Episodes`,
+      `Visits`,
+      `Forays`,
+      `Mass (g)`,
+      `Wing Condition`,
+      OE
+    )
+  ],
+  format = "html",
+  digits = 1
 )
 ```
